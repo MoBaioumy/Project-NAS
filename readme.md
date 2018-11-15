@@ -32,7 +32,7 @@ An app that could help there, is a studying app that has a teacher and student i
 Let's take a subject like math for example:
 
 The app could generate specific problem based on an example and even generate step by step hints until you reach a solution. Take a look at the following example written in JavaScript
-![Sample][https://github.com/artix15/Project-NAS/blob/master/math_counting_example.PNG]
+![Sample](https://github.com/artix15/Project-NAS/blob/master/math_counting_example.PNG)
 
 A far more interesting subject is English (or any other foreign language). The teacher can choose a type of question and simple functionality to help teaching such a class includes:
 
