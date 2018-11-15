@@ -21,7 +21,7 @@ Than main target audience will be travelers.
 
 While the app contains restrooms you could add places to drink, special foods to buy and must do's. 
 
-
+**Note 1: There are such apps; however, non of them if active in Europe (most in US) and they are for specific groupt like people with Crohn's disease.**
 
 ### Option 2: Studying app
 
