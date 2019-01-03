@@ -1,29 +1,7 @@
 The final project for Native App Studio.
 
 
-
-
-
-### Option 1: Pee for Free
-
-Remember last time you were visiting a different city and needed to go to the bathroom? Mostly you keep looking for a while and then find a Burger King and pay for it. 
-
-With this app:
-
--  You can find locations nearby where you could go to the restroom. 
-- You could earn points when you rate the locations 
-- You could earn points by adding new places
-- Using your points you can get special offers 
-
-
-
-Than main target audience will be travelers. 
-
-While the app contains restrooms you could add places to drink, special foods to buy and must do's. 
-
-**Note 1: There are such apps; however, non of them if active in Europe (most in US) and they are for specific groupt like people with Crohn's disease.**
-
-### Option 2: Studying app
+### Studying app - Front end development of a Language learing app
 
 When visiting several developing countries such as Brazil, Egypt and Tunisia, you notice a huge difference in the quality of education than in Amsterdam. Also a lot of students (high-school and university) don't own a laptop and only a smart phone. 
 
