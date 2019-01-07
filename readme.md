@@ -15,7 +15,7 @@ For teachers it is hard to digitalize study material and practice questions them
 
 Having a general database for all teacher also doesn't work since every school and teacher can vary their topic and thus the order and content is often different. However, they often have notes they created for the students to memorize words from and booklets with question (such as Multiple Choice) they collected from several sources. Tools to make digitalizing these would be game changing for them.
 
-![WordList](https://github.com/artix15/Project-NAS/blob/master/Documentation/WordListExample.PNG?raw=true)
+![WordList](https://github.com/artix15/Project-NAS/blob/master/Documentation/WordListExample.PNG)
 
 
 
