@@ -3,7 +3,7 @@ The final project for Native App Studio.
 
 ### Studying app - Front end development of a Language learing app
 
-Motivation and background behind this idea can be found [here]().
+Motivation and background behind this idea can be found [here](https://github.com/artix15/Project-NAS/blob/master/Documentation/WordListExample.PNG?raw=true).
 
 
 
