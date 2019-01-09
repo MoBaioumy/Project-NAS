@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 ## Libraries, tools & API's 
 
 To visualize the results for the students [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) will be used.
@@ -36,8 +32,6 @@ Natural Language Processing is done using [NLTK](https://www.nltk.org/)
 
 I will be using one database with multiple tables for the dummy version .
 
-
-
 **Table 1: Quizzes**
 
 | QUIZ_ID | QUIZ_NAME    | QUIZ_TYPE | OPENING_TIME | CLOSING_TIME |
@@ -45,8 +39,6 @@ I will be using one database with multiple tables for the dummy version .
 | 1       | Unit 1 words | Binary    | 20/01/2019   | 23/01/2019   |
 | 2       | Unit 1 words | MCQ       | 20/01/2019   | 23/01/2019   |
 | 3       | Unit 2 words | MCQ       | 23/01/2019   | 26/01/2019   |
-
-
 
 **Table 2: Students**
 
