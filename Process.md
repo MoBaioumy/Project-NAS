@@ -1,4 +1,4 @@
-# day 2 (8 Jan)
+# Day 2 (8 Jan)
 
 **Goals**
 
@@ -32,7 +32,6 @@ New hand drawn drafts for [teacher side](https://github.com/artix15/Project-NAS/
       The book is more about web design but a lot of the idea's are applicable here.
 
 - [x] **Create a second proper prototype based on feedback and new draft**
-
       Second prototype [video](https://www.youtube.com/watch?v=dPi2C28WYpQ&feature=youtu.be&fbclid=IwAR1snFk3T4RJoFFlXDoGs7b4SqR7w5wlb-OdB_xoOOzI8z6aajFOlQEQEVU). 
 
       ​
@@ -47,6 +46,9 @@ To simplify the project:
 #Day 4 (10 Jan) 
 
 - [ ] Complete the ZAKER prototype by adding teacher functionality
+      [Video](https://youtu.be/h-DTupYigps)
+
+      Feedback included that the teacher parts with more pleasing to look it since that background wasn't very cluttered and neat.
 
 - [ ] Get a basic overview in App Studio 
 
