@@ -23,4 +23,24 @@ New hand drawn drafts for [teacher side](https://github.com/artix15/Project-NAS/
 
 
 
+# Day 3 (9 Jan)
+
+- [ ] **Fix GitHub problems**
+      Unsolvable! 
+
+- [x] **Read a summary of "*Don't make me think*"**
+      The book is more about web design but a lot of the idea's are applicable here.
+
+- [x] **Create a second proper prototype based on feedback and new draft**
+
+      Second prototype [video](https://www.youtube.com/watch?v=dPi2C28WYpQ&feature=youtu.be&fbclid=IwAR1snFk3T4RJoFFlXDoGs7b4SqR7w5wlb-OdB_xoOOzI8z6aajFOlQEQEVU). 
+
+      ​
+
+To simplify the project: 
+
+- I will only keep 2 sample users and no more.
+- It will be only about **one subject** so as a student you only have quizzes instead of having several courses with quizzes for each course.
+
+
 
