@@ -44,3 +44,13 @@ To simplify the project:
 
 
 
+#Day 4 (10 Jan) 
+
+- [ ] Complete the ZAKER prototype by adding teacher functionality
+
+- [ ] Get a basic overview in App Studio 
+
+- [ ] Start with the Image and Text Processing scripts
+
+
+
