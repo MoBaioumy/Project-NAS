@@ -4,10 +4,7 @@
 
 - [x] **Draft the design document**
 
-- [x] **Look for efficient prototyping tools** 
-      I looked at [Google Prototyping Video's](https://www.youtube.com/watch?v=JMjozqJS44M&t=1s)
-      ​
-      Also, I found several tools to make prototypes easily (as see in second video) such as [Proto.io](https://proto.io/) and [Adobe XD](https://www.adobe.com/products/xd/ui-design-kits.html). I went for the second because it has UI kits such as [Material Design](https://material.io/) and can partially be converted in Android studio
+- [x] **Look for efficient prototyping tools** :I looked at [Google Prototyping Video's](https://www.youtube.com/watch?v=JMjozqJS44M&t=1s). Also, I found several tools to make prototypes easily (as see in second video) such as [Proto.io](https://proto.io/) and [Adobe XD](https://www.adobe.com/products/xd/ui-design-kits.html). I went for the second because it has UI kits such as [Material Design](https://material.io/) and can partially be converted in Android studio
 
 - [x] **Make a first prototype**
 
@@ -47,17 +44,23 @@ To simplify the project:
 
 # Day 4 (10 Jan) 
 
-- [ ] Complete the ZAKER prototype by adding teacher functionality
+- [x] Complete the ZAKER prototype by adding teacher functionality: [Video](https://youtu.be/h-DTupYigps). Feedback included that the teacher parts with more pleasing to look it since that background wasn't very cluttered and neat.
 
-      ​
+- [x] Get a basic overview in App Studio 
 
-      [Video](https://youtu.be/h-DTupYigps)
+- [x] Start with the Image and Text Processing scripts
 
-      Feedback included that the teacher parts with more pleasing to look it since that background wasn't very cluttered and neat.
 
-- [ ] Get a basic overview in App Studio 
 
-- [ ] Start with the Image and Text Processing scripts
+
+# Day 5 (11 Jan)
+
+- [x] **Get feedback on the design**
+      A feedback has been very positive so far and much better than the first prototype.
+- [x] **Mentor Meeting and check that my project and proposal are all right.**
+- [ ] **Create the Zaker prototype UI interface in Android Studio**
+      The elements created in Photoshop can be imported as drawable. 
+- [ ] **Finish the Zaker Prototype in App studio (all the activities, navigation and test functionality)**
 
 
 
