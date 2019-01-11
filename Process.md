@@ -11,6 +11,8 @@
 
 - [x] **Make a first prototype**
 
+      ​
+
       A very quick prototype has been made and a [video](https://www.youtube.com/watch?v=p5YkaQjKWw0&feature=youtu.be) demonstrating the idea
 
 - [x] **Get feedback on prototype**
@@ -46,6 +48,9 @@ To simplify the project:
 #Day 4 (10 Jan) 
 
 - [ ] Complete the ZAKER prototype by adding teacher functionality
+
+      ​
+
       [Video](https://youtu.be/h-DTupYigps)
 
       Feedback included that the teacher parts with more pleasing to look it since that background wasn't very cluttered and neat.
