@@ -32,8 +32,7 @@ New hand drawn drafts for [teacher side](https://github.com/artix15/Project-NAS/
 
 - [x] **Create a second proper prototype based on feedback and new draft**
 
-      Second prototype [video](https://www.youtube.com/watch?v=dPi2C28WYpQ&feature=youtu.be&fbclid=IwAR1snFk3T4RJoFFlXDoGs7b4SqR7w5wlb-OdB_xoOOzI8z6aajFOlQEQEVU). 
-      ​
+Second prototype [video](https://www.youtube.com/watch?v=dPi2C28WYpQ&feature=youtu.be&fbclid=IwAR1snFk3T4RJoFFlXDoGs7b4SqR7w5wlb-OdB_xoOOzI8z6aajFOlQEQEVU). 
 
 To simplify the project: 
 
