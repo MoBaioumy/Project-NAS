@@ -14,8 +14,8 @@ public class StudentOverviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student_overview);
 
 
-        final Button btn_community = (Button) findViewById(R.id.btn_community);
-        btn_community.setOnClickListener(new View.OnClickListener() {
+        final Button communityButton = (Button) findViewById(R.id.btn_community);
+        communityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (StudentOverviewActivity.this , CommunityStudentActivity.class);
@@ -23,8 +23,8 @@ public class StudentOverviewActivity extends AppCompatActivity {
             }
         });
 
-        final Button btn_progress = (Button) findViewById(R.id.btn_progress);
-        btn_progress.setOnClickListener(new View.OnClickListener() {
+        final Button progressButton = (Button) findViewById(R.id.btn_progress);
+        progressButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (StudentOverviewActivity.this , StudentProgressActivity.class);
@@ -32,8 +32,8 @@ public class StudentOverviewActivity extends AppCompatActivity {
             }
         });
 
-        final Button btn_quizzes = (Button) findViewById(R.id.btn_quizzes);
-        btn_quizzes.setOnClickListener(new View.OnClickListener() {
+        final Button quizzesButton = (Button) findViewById(R.id.btn_quizzes);
+        quizzesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (StudentOverviewActivity.this , StudentQuizListActivity.class);

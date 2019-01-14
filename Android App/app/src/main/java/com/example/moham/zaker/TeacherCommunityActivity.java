@@ -3,7 +3,7 @@ package com.example.moham.zaker;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CommunityTeacherActivity extends AppCompatActivity {
+public class TeacherCommunityActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
