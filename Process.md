@@ -63,5 +63,15 @@ To simplify the project:
 
 # Day 6 (14 Jan)
 
-- [ ] **Continue on the Zaker Prototype in App studio (all the activities, navigation and test functionality)**
-- [ ] ​
+- [x] **Continue on the Zaker Prototype in App studio (all the activities, navigation and test functionality)**
+
+- [ ] **Get [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) to work properly**
+
+- [ ] **Create test chart for Student Progress**
+
+- [ ] **Question class and adapter for the quizzes**
+
+- [ ] **Create Database, save quizzes and read from it**
+
+      ​
+
