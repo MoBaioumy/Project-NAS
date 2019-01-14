@@ -4,13 +4,9 @@
 
 - [x] **Draft the design document**
 
-- [x] **Look for efficient prototyping tools** :I looked at [Google Prototyping Video's](https://www.youtube.com/watch?v=JMjozqJS44M&t=1s). Also, I found several tools to make prototypes easily (as see in second video) such as [Proto.io](https://proto.io/) and [Adobe XD](https://www.adobe.com/products/xd/ui-design-kits.html). I went for the second because it has UI kits such as [Material Design](https://material.io/) and can partially be converted in Android studio
+- [x] **Look for efficient prototyping tools**: I looked at [Google Prototyping Video's](https://www.youtube.com/watch?v=JMjozqJS44M&t=1s). Also, I found several tools to make prototypes easily (as see in second video) such as [Proto.io](https://proto.io/) and [Adobe XD](https://www.adobe.com/products/xd/ui-design-kits.html). I went for the second because it has UI kits such as [Material Design](https://material.io/) and can partially be converted in Android studio
 
-- [x] **Make a first prototype**
-
-      ​
-
-      A very quick prototype has been made and a [video](https://www.youtube.com/watch?v=p5YkaQjKWw0&feature=youtu.be) demonstrating the idea
+- [x] **Make a first prototype**: A very quick prototype has been made and a [video](https://www.youtube.com/watch?v=p5YkaQjKWw0&feature=youtu.be) demonstrating the idea
 
 - [x] **Get feedback on prototype**
       6 people gave feedback on my prototype. Main critical points were: it doesn't look good, the sidebar, it's cluttered and there are too many unnecessary option. 
@@ -57,9 +53,15 @@ To simplify the project:
 - [x] **Get feedback on the design**
       A feedback has been very positive so far and much better than the first prototype.
 - [x] **Mentor Meeting and check that my project and proposal are all right.**
-- [ ] **Create the Zaker prototype UI interface in Android Studio**
-      The elements created in Photoshop can be imported as drawable. 
+- [ ] ~~**Create the Zaker prototype UI interface in Android Studio**~~
+      ~~The elements created in Photoshop can be imported as drawable.~~ Feedback was: the design looks good and fun but is not really about an educational app. So I decided to have a blank design for now and  focus on the functionality.
 - [ ] **Finish the Zaker Prototype in App studio (all the activities, navigation and test functionality)**
+      Good progress but not finished
 
 
 
+
+# Day 6 (14 Jan)
+
+- [ ] **Continue on the Zaker Prototype in App studio (all the activities, navigation and test functionality)**
+- [ ] ​
