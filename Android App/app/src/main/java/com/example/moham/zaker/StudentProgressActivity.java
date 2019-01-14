@@ -47,7 +47,7 @@ public class StudentProgressActivity extends AppCompatActivity {
         gradesSet.setColor(Color.BLUE);
         gradesSet.setValueTextColor(Color.BLACK);
         gradesSet.setValueTextSize(20f);
-        
+
 
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
         dataSets.add(gradesSet);

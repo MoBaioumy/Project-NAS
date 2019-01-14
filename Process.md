@@ -65,9 +65,9 @@ To simplify the project:
 
 - [x] **Continue on the Zaker Prototype in App studio (all the activities, navigation and test functionality)**
 
-- [ ] **Get [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) to work properly**
+- [x] **Get [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) to work properly**
 
-- [ ] **Create test chart for Student Progress**
+- [x] **Create test chart for Student Progress**
 
 - [ ] **Question class and adapter for the quizzes**
 
