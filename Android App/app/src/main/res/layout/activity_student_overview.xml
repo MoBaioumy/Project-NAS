@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.3" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_quizzes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.618" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -45,19 +45,19 @@
         android:background="@drawable/btn_long"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_quizzes" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_community"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="8dp"
-        android:text="Community"
         android:background="@drawable/btn_long"
+        android:text="Community"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_progress"
         app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>
