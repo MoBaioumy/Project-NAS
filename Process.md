@@ -55,23 +55,36 @@ To simplify the project:
 - [x] **Mentor Meeting and check that my project and proposal are all right.**
 - [ ] ~~**Create the Zaker prototype UI interface in Android Studio**~~
       ~~The elements created in Photoshop can be imported as drawable.~~ Feedback was: the design looks good and fun but is not really about an educational app. So I decided to have a blank design for now and  focus on the functionality.
-- [ ] **Finish the Zaker Prototype in App studio (all the activities, navigation and test functionality)**
+- [x] **Finish the Zaker Prototype in App studio (all the activities, navigation and test functionality)**
       Good progress but not finished
 
 
+I have decided to leave out the following for the Alpha Version:
 
+- Any graphics and UI creation until the functionality is done properly. Not only does it cost time, but feedback about it hasn't been very positive
+- I will have 3 sample quizzes hardcoded for the teacher. In the future it will be data coming from Python scripts that processed images.
+- No API's will be used for now. The teacher will save questions for the quizzes to the Data Base and the student will read them from there.
 
 # Day 6 (14 Jan)
 
 - [x] **Continue on the Zaker Prototype in App studio (all the activities, navigation and test functionality)**
 
-- [x] **Get [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) to work properly**
+- [x] **Get [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) to work properly**: [Screenshot of the test](https://github.com/artix15/Project-NAS/blob/master/Documentation/BasicLineChart.png)
 
 - [x] **Create test chart for Student Progress**
 
-- [ ] **Question class and adapter for the quizzes**
+- [x] **Question class and adapter for the quizzes**
 
-- [ ] **Create Database, save quizzes and read from it**
+- [x] **Create Database, save quizzes and read from it**
 
       ​
+
+
+# Day 7 (15 Jan)
+
+- [ ] **Create 3 sample quizzes a teacher can add**
+- [ ] **Display word list after being added**
+- [ ] **Allow the quizzes to be sent to the data base and to read them **
+- [ ] **On the student side, read the words from the data base**
+- [ ] **Create a simple True/False quiz with the words**
 
