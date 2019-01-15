@@ -22,8 +22,53 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:hint="Content"
-        android:gravity="top" />
+        android:gravity="top"
+        android:hint="Description" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_animals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:text="Animals" />
+
+        <Button
+            android:id="@+id/btn_house"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:text="House" />
+
+        <Button
+            android:id="@+id/btn_greetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:text="Greetings" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonSubmit"
@@ -31,6 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:backgroundTint="@color/colorPrimary"
-        android:text="Submit Entry" />
+        android:text="Submit Entry"
+        android:visibility="invisible" />
+
 
 </LinearLayout>

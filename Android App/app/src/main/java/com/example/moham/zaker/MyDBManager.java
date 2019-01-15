@@ -39,6 +39,7 @@ public class MyDBManager extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+
 //    Add new row to the database
     public void addWord(Word word){
         ContentValues values = new ContentValues();
