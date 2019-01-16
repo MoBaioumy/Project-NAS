@@ -2,6 +2,7 @@ package com.example.moham.zaker;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -18,9 +19,6 @@ public class MyDBManager extends SQLiteOpenHelper {
     public static final String COLUMN_TRANSLATION = "translation";
     public static final String COLUMN_QUIZ = "quiz";
 
-    public MyDBManager(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, DATABASE_NAME, factory, DATABASE_VERSION);
-    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -33,10 +31,27 @@ public class MyDBManager extends SQLiteOpenHelper {
         db.execSQL(query);
     }
 
+    //    private static variable called instance of type EntryDatabase. This is where the unique instance of the class is stored, once made.
+    private static MyDBManager instance;
+
+    private MyDBManager(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + WORDS_TABLE);
         onCreate(db);
+    }
+
+
+    // singlton code
+    public static MyDBManager getInstance(Context context) {
+        if (instance == null) {
+            MyDBManager db = new MyDBManager(context);
+            instance = db;
+        }
+        return instance;
     }
 
 
@@ -45,6 +60,7 @@ public class MyDBManager extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_WORD, word.getName());
         values.put(COLUMN_TRANSLATION, word.getTranslation());
+//        values.put(COLUMN_QUIZ, quizId);
 
         SQLiteDatabase db = getWritableDatabase();
         db.insert(WORDS_TABLE, null, values);
@@ -54,5 +70,12 @@ public class MyDBManager extends SQLiteOpenHelper {
     public void deleteWord(Word word){
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("DELETE FROM " + WORDS_TABLE + " WHERE " + COLUMN_WORD + "=\"" + word.getName()+ "\";");
+    }
+
+    // A methond to select all in the database
+    public Cursor selectAll() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT  * FROM " + WORDS_TABLE, null);
+        return cursor;
     }
 }

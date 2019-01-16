@@ -31,5 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        MyDBManager db = MyDBManager.getInstance(getApplicationContext());
     }
 }

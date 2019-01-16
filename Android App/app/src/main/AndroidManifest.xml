@@ -29,7 +29,8 @@
         <activity android:name=".TeacherProgressActivity" />
         <activity android:name=".StudentQuizListActivity" />
         <activity android:name=".TeacherQuizListActivity" />
-        <activity android:name=".QuizInputActivity"></activity>
+        <activity android:name=".QuizInputActivity" />
+        <activity android:name=".QuizInputFinishedActivity"></activity>
     </application>
 
 </manifest>

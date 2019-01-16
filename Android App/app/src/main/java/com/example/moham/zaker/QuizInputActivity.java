@@ -1,5 +1,6 @@
 package com.example.moham.zaker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,12 @@ public class QuizInputActivity extends AppCompatActivity {
                         new Word("horse", "paard"),
                         new Word("lion", "leeuw")};
 
+                for (int i = 0; i < finalWordList.length; i++){
+                    MyDBManager.getInstance(getApplicationContext()).addWord(finalWordList[i]);
+                };
+                Intent intent = new Intent(QuizInputActivity.this, QuizInputFinishedActivity.class);
+                startActivity(intent);
+
             }
         });
 
@@ -35,8 +42,14 @@ public class QuizInputActivity extends AppCompatActivity {
                         new Word("Good afternoon!", "Goede Middag!"),
                         new Word("Good evening!", "Goeden avond!")};
 
+                for (int i = 0; i < finalWordList.length; i++){
+                    MyDBManager.getInstance(getApplicationContext()).addWord(finalWordList[i]);
+                };
+                Intent intent = new Intent(QuizInputActivity.this, QuizInputFinishedActivity.class);
+                startActivity(intent);
             }
         });
+
 
         final Button houseButton = (Button) findViewById(R.id.btn_house);
         houseButton.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +64,13 @@ public class QuizInputActivity extends AppCompatActivity {
                         new Word("roof", "dak"),
                         new Word("house", "huis")};
 
+                for (int i = 0; i < finalWordList.length; i++){
+                    MyDBManager.getInstance(getApplicationContext()).addWord(finalWordList[i]);
+                };
+                Intent intent = new Intent(QuizInputActivity.this, QuizInputFinishedActivity.class);
+                startActivity(intent);
             }
+
         });
 
     }

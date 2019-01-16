@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 public class StudentOverviewActivity extends AppCompatActivity {
+    private MyDBManager db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_overview);
+
 
 
         final Button communityButton = (Button) findViewById(R.id.btn_community);
