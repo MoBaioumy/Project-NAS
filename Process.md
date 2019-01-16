@@ -82,9 +82,15 @@ I have decided to leave out the following for the Alpha Version:
 
 # Day 7 (15 Jan)
 
-- [ ] **Create 3 sample quizzes a teacher can add**
+- [x] **Create 3 sample quizzes a teacher can add**
 - [ ] **Display word list after being added**
 - [ ] **Allow the quizzes to be sent to the data base and to read them **
 - [ ] **On the student side, read the words from the data base**
 - [ ] **Create a simple True/False quiz with the words**
 
+
+
+
+# Day 8 (16 Jan)
+
+Nothing new. The code from yesterday is still not working properly. 
