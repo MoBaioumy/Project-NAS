@@ -27,7 +27,9 @@ public class QuizInputActivity extends AppCompatActivity {
                 for (int i = 0; i < finalWordList.length; i++){
                     MyDBManager.getInstance(getApplicationContext()).addWord(finalWordList[i]);
                 };
-                Intent intent = new Intent(QuizInputActivity.this, QuizInputFinishedActivity.class);
+                Intent intent = new Intent(QuizInputActivity.this,
+                        QuizInputFinishedActivity.class);
+
                 startActivity(intent);
 
             }
