@@ -13,8 +13,27 @@
         android:layout_weight="1"
         android:text="Your Quizzes" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+    <Button
+        android:id="@+id/btn_true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:text="True" />
+
+    <Button
+        android:id="@+id/btn_false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:text="False" />
+
+    <TextView
+        android:id="@+id/text_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="0" />
 
 </LinearLayout>

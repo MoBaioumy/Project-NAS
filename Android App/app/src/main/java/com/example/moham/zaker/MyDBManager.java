@@ -7,6 +7,9 @@ import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyDBManager extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
@@ -78,4 +81,38 @@ public class MyDBManager extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("SELECT  * FROM " + WORDS_TABLE, null);
         return cursor;
     }
+
+    public List databaseToString(int i){
+        List <String> dbString = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT "+ COLUMN_WORD +", "+ COLUMN_TRANSLATION+" FROM " + WORDS_TABLE + " WHERE " + COLUMN_ID + " = " + i;
+
+        // Cursor point to a location in your location
+        Cursor c = db.rawQuery(query, null);
+
+        c.moveToFirst();
+        dbString.add(c.getString(c.getColumnIndex(COLUMN_WORD)));
+        dbString.add(c.getString(c.getColumnIndex(COLUMN_TRANSLATION)));
+
+
+
+//        while(!c.isAfterLast()){
+//            if(c.getString(c.getColumnIndex("word"))!=null){
+//                dbString += c.getString(c.getColumnIndex("words"));
+//                dbString +="\n";
+//                c.moveToNext();
+//            }
+//        }
+        db.close();
+        return dbString;
+    }
+
+
+//    public Cursor selectWord() {
+//        String query = "select * from " + tableName + " where "+ KEY_USERNAME + " = '" + uname + "'";
+//        SQLiteDatabase sql = this.getReadableDatabase();
+//        Cursor cur = sql.rawQuery(query, null);
+//        return cur;
+//    }
+
 }
