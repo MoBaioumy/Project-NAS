@@ -83,14 +83,16 @@ I have decided to leave out the following for the Alpha Version:
 # Day 7 (15 Jan)
 
 - [x] **Create 3 sample quizzes a teacher can add**
-- [ ] **Display word list after being added**
-- [ ] **Allow the quizzes to be sent to the data base and to read them **
-- [ ] **On the student side, read the words from the data base**
-- [ ] **Create a simple True/False quiz with the words**
+- [x] **Display word list after being added**
+- [x] **Allow the quizzes to be sent to the data base and to read them **
+- [x] **On the student side, read the words from the data base**
+- [x] **Create a simple True/False quiz with the words**
 
 
 
 
-# Day 8 (16 Jan)
+# Day 8, 9 (16, 17 Jan)
 
 Nothing new. The code from yesterday is still not working properly. 
+
+Everything works now; however, from the student side you can't choose from different quizzes anymore, just answers the most recent questions added.
