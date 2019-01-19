@@ -27,10 +27,11 @@
         <activity android:name=".CommunityStudentActivity" />
         <activity android:name=".StudentProgressActivity" />
         <activity android:name=".TeacherProgressActivity" />
-        <activity android:name=".StudentQuizListActivity" />
+        <activity android:name=".StudentQuizActivity" />
         <activity android:name=".TeacherQuizListActivity" />
         <activity android:name=".QuizInputActivity" />
-        <activity android:name=".QuizInputFinishedActivity"></activity>
+        <activity android:name=".QuizInputFinishedActivity" />
+        <activity android:name=".StudentFinalScoreActivity"></activity>
     </application>
 
 </manifest>

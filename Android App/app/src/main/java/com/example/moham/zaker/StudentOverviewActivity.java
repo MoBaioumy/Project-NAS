@@ -38,7 +38,7 @@ public class StudentOverviewActivity extends AppCompatActivity {
         quizzesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (StudentOverviewActivity.this , StudentQuizListActivity.class);
+                Intent intent = new Intent (StudentOverviewActivity.this , StudentQuizActivity.class);
                 startActivity(intent);
             }
         });

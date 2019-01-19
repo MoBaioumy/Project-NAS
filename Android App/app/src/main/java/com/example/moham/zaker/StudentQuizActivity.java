@@ -1,5 +1,6 @@
 package com.example.moham.zaker;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import java.util.List;
 import java.util.Random;
 
-public class StudentQuizListActivity extends AppCompatActivity {
+public class StudentQuizActivity extends AppCompatActivity {
 
     private MyDBManager db;
     public int i;
@@ -66,8 +67,21 @@ public class StudentQuizListActivity extends AppCompatActivity {
             score++;
             txtScore.setText("Score: " + score);
         }
+
+        else if (btn_text.equals("False") && !randWord.equals(trans)){
+            score++;
+            txtScore.setText("Score: " + score);
+        }
         i++;
         nextWord();
+
+        if (i == 10){
+            Intent intent = new Intent (StudentQuizActivity.this , StudentFinalScoreActivity.class);
+            intent.putExtra("score", score);
+            startActivity(intent);
+        }
+
+
 
     }
 }
