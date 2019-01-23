@@ -107,11 +107,11 @@ Sick
 
 # Day 13 
 
-- [ ] Add functions to the data bases to add quizzes, 
-- [ ] retrieve quizzes, 
-- [ ] add results,
-- [ ] Link the tables together
-- [ ] Create the quizList and its adapter
-- [ ] Create the wordList and its adapter
-- [ ] Make sure every quiz contains only the words associated with it (read only that from database)
+- [x] Add functions to the data bases to add quizzes, 
+- [x] retrieve quizzes, 
+- [x] add results,
+- [x] Link the tables together
+- [x] Create the quizList and its adapter
+- [x] Create the wordList and its adapter
+- [x] Make sure every quiz contains only the words associated with it (read only that from database)
 - [ ] Clean up all the code and add proper comments

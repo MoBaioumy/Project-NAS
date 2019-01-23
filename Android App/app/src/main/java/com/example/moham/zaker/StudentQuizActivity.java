@@ -30,8 +30,6 @@ public class StudentQuizActivity extends AppCompatActivity {
         i = 1;
         nextWord();
 
-
-
 //        Toast.makeText("", )
 
     }
@@ -39,15 +37,15 @@ public class StudentQuizActivity extends AppCompatActivity {
     public void nextWord(){
         db = MyDBManager.getInstance(getApplicationContext());
 
-        List cursor = db.databaseToString(i);
+        List cursor = db.getWordAndTranslation(i);
         TextView txt = (TextView) findViewById(R.id.textView9);
         word = (String) cursor.get(0);
         trans = (String) cursor.get(1);
 
 
         Random rand = new Random();
-        int n = rand.nextInt(10) + 1;
-        cursor = db.databaseToString(n);
+        int n = rand.nextInt(6) + 1;
+        cursor = db.getWordAndTranslation(n);
         randWord = (String) cursor.get(1);
 
 
@@ -75,13 +73,11 @@ public class StudentQuizActivity extends AppCompatActivity {
         i++;
         nextWord();
 
-        if (i == 10){
+        if (i == 6){
             Intent intent = new Intent (StudentQuizActivity.this , StudentFinalScoreActivity.class);
             intent.putExtra("score", score);
             startActivity(intent);
         }
-
-
 
     }
 }

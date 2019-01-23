@@ -3,6 +3,8 @@ package com.example.moham.zaker;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class StudentFinalScoreActivity extends AppCompatActivity {
@@ -17,6 +19,16 @@ public class StudentFinalScoreActivity extends AppCompatActivity {
 
         TextView txtScore = (TextView) findViewById(R.id.txt_final_score);
         txtScore.setText("Your score is " + score);
+
+        Button restartQuizButton = (Button) findViewById(R.id.btn_done);
+        restartQuizButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent = new Intent (StudentFinalScoreActivity.this ,
+                                    StudentOverviewActivity.class);
+                startActivity(backIntent);
+            }
+        });
 
     }
 }

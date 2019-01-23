@@ -34,5 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         MyDBManager db = MyDBManager.getInstance(getApplicationContext());
+        db.onUpgrade(db.getWritableDatabase(), 1, 1);
     }
 }

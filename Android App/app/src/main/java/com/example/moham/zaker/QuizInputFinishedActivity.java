@@ -17,7 +17,7 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
 
 
         db = MyDBManager.getInstance(getApplicationContext());
-        Cursor cursor = db.selectAll();
+        Cursor cursor = db.selectAllWords();
 
         adapter = new WordListAdapter(getApplicationContext(), cursor);
         final ListView journalList = findViewById(R.id.listViewJournals);
