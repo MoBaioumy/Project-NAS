@@ -96,3 +96,22 @@ I have decided to leave out the following for the Alpha Version:
 Nothing new. The code from yesterday is still not working properly. 
 
 Everything works now; however, from the student side you can't choose from different quizzes anymore, just answers the most recent questions added.
+
+
+
+# Day 10, 11, 12
+
+Sick
+
+
+
+# Day 13 
+
+- [ ] Add functions to the data bases to add quizzes, 
+- [ ] retrieve quizzes, 
+- [ ] add results,
+- [ ] Link the tables together
+- [ ] Create the quizList and its adapter
+- [ ] Create the wordList and its adapter
+- [ ] Make sure every quiz contains only the words associated with it (read only that from database)
+- [ ] Clean up all the code and add proper comments
