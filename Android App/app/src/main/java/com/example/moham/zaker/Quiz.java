@@ -8,9 +8,9 @@ public class Quiz {
     private ArrayList<Word> questions;
     private String description;
 
-    public Quiz(String name, ArrayList<Word> questions) {
+    public Quiz(String name, String description) {
         this.name = name;
-        this.questions = questions;
+        this.description = description;
     }
 
     public Quiz(String name, ArrayList<Word> questions, String description) {
