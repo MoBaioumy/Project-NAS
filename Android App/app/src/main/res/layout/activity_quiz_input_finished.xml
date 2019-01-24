@@ -8,7 +8,7 @@
 
 
     <ListView
-        android:id="@+id/listViewJournals"
+        android:id="@+id/list_input_words"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -9,5 +9,8 @@ public class TeacherProgressActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_progress);
+
+        // bar chart with student name under every bar and quiz score as the height.
+
     }
 }

@@ -15,14 +15,17 @@ public class WordListAdapter extends ResourceCursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
+        // Get widgets
         TextView textTitle = view.findViewById(R.id.word);
         TextView textContent = view.findViewById(R.id.trans);
 
-        String title = cursor.getString(cursor.getColumnIndex(MyDBManager.COLUMN_WORD));
-        textTitle.setText(title);
+        // the word to the Word found in the database
+        String word = cursor.getString(cursor.getColumnIndex(MyDBManager.COLUMN_WORD));
+        textTitle.setText(word);
 
-        String content = cursor.getString(cursor.getColumnIndex(MyDBManager.COLUMN_TRANSLATION));
-        textContent.setText(content);
+        // the translation to the Translation found in the database
+        String translation = cursor.getString(cursor.getColumnIndex(MyDBManager.COLUMN_TRANSLATION));
+        textContent.setText(translation);
 
     }
 }

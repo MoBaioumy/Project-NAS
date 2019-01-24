@@ -8,18 +8,29 @@ public class Word implements Serializable {
     private Boolean isMemorized;
     private Integer quizNumber;
 
+    /**
+     * Default constructor
+     * @param name
+     * @param translation
+     */
     public Word(String name, String translation) {
         this.name = name;
         this.translation = translation;
-
     }
 
+    /**
+     * Constructor with quizNumber as well
+     * @param name
+     * @param translation
+     * @param quizNumber
+     */
     public Word(String name, String translation, Integer quizNumber) {
         this.name = name;
         this.translation = translation;
         this.quizNumber = quizNumber;
     }
 
+    // Setters and Getters
     public String getName() {
         return name;
     }

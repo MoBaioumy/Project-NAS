@@ -24,7 +24,7 @@
         <activity android:name=".TeacherOverviewActivity" />
         <activity android:name=".StudentOverviewActivity" />
         <activity android:name=".TeacherCommunityActivity" />
-        <activity android:name=".CommunityStudentActivity" />
+        <activity android:name=".StudentCommunityActivity" />
         <activity android:name=".StudentProgressActivity" />
         <activity android:name=".TeacherProgressActivity" />
         <activity android:name=".StudentQuizActivity" />

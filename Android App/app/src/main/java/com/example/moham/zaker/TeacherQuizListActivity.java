@@ -17,7 +17,6 @@ public class TeacherQuizListActivity extends AppCompatActivity {
     private MyDBManager db;
     private QuizListAdapter adapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,38 +27,24 @@ public class TeacherQuizListActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TeacherQuizListActivity.this, QuizInputActivity.class);
+                Intent intent = new Intent(TeacherQuizListActivity.this,
+                                QuizInputActivity.class);
                 startActivity(intent);
             }
         });
 
-
-
+        // get all quizzes from the database, QUIZZES_TABLE
         db = MyDBManager.getInstance(getApplicationContext());
         Cursor cursor = db.selectAllQuizzes();
 
-        // ERROR
+        // Add all the quizzes to list view using the adapter
         adapter = new QuizListAdapter(getApplicationContext(), cursor);
         final ListView quizList = findViewById(R.id.list_quiz);
         quizList.setAdapter(adapter);
 
-
-
-
-//        Word bottle = new Word("bottle", "fles");
-//        Word morning = new Word("morning", "ochtend");
-//
-//        ArrayList<Word> wordsList = new ArrayList<>();
-//        wordsList.add(bottle);
-//        wordsList.add(morning);
-//
-//
-//        Quiz testQuiz = new Quiz("test", wordsList, "A test quiz");
-//        ArrayList<Quiz> quizList = new ArrayList<>();
-//        quizList.add(testQuiz);
-//
-//        QuizListAdapter quizAdapter = new QuizListAdapter(this, R.layout.quiz_entry_layout, quizList);
-//        mListView.setAdapter(quizAdapter);
+        /* ToDo
+         */
+        // ToDo: Set listener to select the quiz and view the words within it
 
 
     }

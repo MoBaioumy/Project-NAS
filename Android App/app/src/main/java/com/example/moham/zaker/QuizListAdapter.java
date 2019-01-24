@@ -20,11 +20,13 @@ import java.util.List;
 public class QuizListAdapter extends ResourceCursorAdapter {
 
     public QuizListAdapter(Context context, Cursor cursor) {
+        // ToDo: Make another layout for the quizzes
         super(context, R.layout.word_entry_layout, cursor);
     }
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
+        // Get the Widgets
         TextView textTitle = view.findViewById(R.id.word);
         TextView textContent = view.findViewById(R.id.trans);
 

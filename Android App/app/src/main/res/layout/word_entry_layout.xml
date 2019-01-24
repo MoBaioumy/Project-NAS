@@ -12,7 +12,7 @@
         android:layout_height="60dp"
         android:layout_weight="50"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/trans"
@@ -20,7 +20,7 @@
         android:layout_height="60dp"
         android:layout_weight="50"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
 
 </LinearLayout>

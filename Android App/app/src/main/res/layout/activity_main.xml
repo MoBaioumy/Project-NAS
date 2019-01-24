@@ -52,13 +52,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnMohamed"
+        android:id="@+id/btn_philip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Philip Oosterholt"
         android:background="@drawable/btn_long"
+        android:text="Philip Oosterholt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,15 +66,15 @@
         app:layout_constraintVertical_bias="0.61" />
 
     <Button
-        android:id="@+id/btnKarel"
+        android:id="@+id/btn_karel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Karel Scheepsta"
         android:background="@drawable/btn_long"
+        android:text="Karel Scheepsta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +82,7 @@
         app:layout_constraintVertical_bias="0.763" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -100,7 +100,7 @@
         app:layout_constraintVertical_bias="0.924" />
 
     <Button
-        android:id="@+id/btnSignup"
+        android:id="@+id/btn_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

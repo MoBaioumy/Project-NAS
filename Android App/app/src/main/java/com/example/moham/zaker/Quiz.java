@@ -8,17 +8,29 @@ public class Quiz {
     private ArrayList<Word> questions;
     private String description;
 
+    /**
+     * Default constructor
+     * @param name
+     * @param description
+     */
     public Quiz(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
+    /**
+     * Constructor to add the questions as well
+     * @param name
+     * @param questions
+     * @param description
+     */
     public Quiz(String name, ArrayList<Word> questions, String description) {
         this.name = name;
         this.questions = questions;
         this.description = description;
     }
 
+    // Setters and Getters
     public String getName() {
         return name;
     }

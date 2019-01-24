@@ -18,7 +18,7 @@ public class StudentFinalScoreActivity extends AppCompatActivity {
         int score = intent.getIntExtra("score", 1);
 
         TextView txtScore = (TextView) findViewById(R.id.txt_final_score);
-        txtScore.setText("Your score is " + score);
+        txtScore.setText("Your score is " + score + "/10");
 
         Button restartQuizButton = (Button) findViewById(R.id.btn_done);
         restartQuizButton.setOnClickListener(new View.OnClickListener() {
