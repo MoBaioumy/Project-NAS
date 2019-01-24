@@ -114,4 +114,6 @@ Sick
 - [x] Create the quizList and its adapter
 - [x] Create the wordList and its adapter
 - [x] Make sure every quiz contains only the words associated with it (read only that from database)
-- [ ] Clean up all the code and add proper comments
+
+# Day 14 (24 Jan)
+- [x] Clean up all the code and add proper comments
