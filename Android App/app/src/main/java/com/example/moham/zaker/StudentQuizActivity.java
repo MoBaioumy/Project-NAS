@@ -21,6 +21,7 @@ public class StudentQuizActivity extends AppCompatActivity {
     public String trans;
     public String randWord;
     int score = 0;
+    int QUIZ_SIZE = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,8 @@ public class StudentQuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_quiz_list);
         i = 1;
+
+        // ToDO: Add try except for when the database is still empty
         nextWord();
 
 //        Toast.makeText("", )
@@ -35,20 +38,22 @@ public class StudentQuizActivity extends AppCompatActivity {
     }
 
     public void nextWord(){
+        // get database
         db = MyDBManager.getInstance(getApplicationContext());
 
+        // get a list with the words & translation. since it's only 2 items, a hash map is overkill
         List cursor = db.getWordAndTranslation(i);
         TextView txt = (TextView) findViewById(R.id.textView9);
         word = (String) cursor.get(0);
         trans = (String) cursor.get(1);
 
-
+        // get a ransom translation as a test word
         Random rand = new Random();
         int n = rand.nextInt(6) + 1;
         cursor = db.getWordAndTranslation(n);
         randWord = (String) cursor.get(1);
 
-
+        // Set the text for the question
         txt.setText("Does " + word + " mean " + randWord + "?");
 
     }
@@ -59,8 +64,7 @@ public class StudentQuizActivity extends AppCompatActivity {
 
         TextView txtScore = (TextView) findViewById(R.id.text_score);
 
-
-
+        // if answered correctly, increase score
         if (btn_text.equals("True") && randWord.equals(trans)){
             score++;
             txtScore.setText("Score: " + score);
@@ -70,12 +74,19 @@ public class StudentQuizActivity extends AppCompatActivity {
             score++;
             txtScore.setText("Score: " + score);
         }
+        // move to the next word
         i++;
         nextWord();
 
-        if (i == 6){
-            Intent intent = new Intent (StudentQuizActivity.this , StudentFinalScoreActivity.class);
+        // After the quiz size is reached, report score and move to next activity
+
+        // maybe try, catch so that when quiz is over, move to the next
+        if (i == QUIZ_SIZE){
+            Intent intent = new Intent (StudentQuizActivity.this,
+                            StudentFinalScoreActivity.class);
             intent.putExtra("score", score);
+            // ToDO: fix code to add results
+            db.addResult(score, 1, "Karel Scheepstra");
             startActivity(intent);
         }
 

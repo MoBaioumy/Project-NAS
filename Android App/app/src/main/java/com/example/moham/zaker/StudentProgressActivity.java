@@ -25,6 +25,7 @@ public class StudentProgressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_progress);
 
+
         mChart = (LineChart) findViewById(R.id.chart);
 
 //        mChart.setOnChartGestureListener(StudentProgressActivity.this);
@@ -33,6 +34,7 @@ public class StudentProgressActivity extends AppCompatActivity {
         mChart.setDragEnabled(true);
         mChart.setScaleEnabled(true);
 
+        // TODO: add code to import results from the data base and visualize it
         ArrayList<Entry> yValues = new ArrayList<>();
         yValues.add(new Entry(0, 60f));
         yValues.add(new Entry(1, 50f));

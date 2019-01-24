@@ -31,7 +31,8 @@
         <activity android:name=".TeacherQuizListActivity" />
         <activity android:name=".QuizInputActivity" />
         <activity android:name=".QuizInputFinishedActivity" />
-        <activity android:name=".StudentFinalScoreActivity"></activity>
+        <activity android:name=".StudentFinalScoreActivity" />
+        <activity android:name=".StudentQuizListActivity"></activity>
     </application>
 
 </manifest>

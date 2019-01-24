@@ -14,12 +14,15 @@ public class StudentFinalScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_final_score);
 
+        // get the score from the quiz
         Intent intent = getIntent();
         int score = intent.getIntExtra("score", 1);
 
+        // set the final score text
         TextView txtScore = (TextView) findViewById(R.id.txt_final_score);
         txtScore.setText("Your score is " + score + "/10");
 
+        // Button to move back to your quizzes
         Button restartQuizButton = (Button) findViewById(R.id.btn_done);
         restartQuizButton.setOnClickListener(new View.OnClickListener() {
             @Override
