@@ -117,3 +117,13 @@ Sick
 
 # Day 14 (24 Jan)
 - [x] Clean up all the code and add proper comments
+
+
+
+# Day 15 (25 Jan)
+
+- [ ] Fix all created GitHub issues
+- [ ] Create student visualization as a bar chart for every quiz 
+- [ ] Create teacher visualization as a line graph with an option to change the student
+- [ ] Create community version for Teacher
+- [ ] Create community version for Student
