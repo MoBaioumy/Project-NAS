@@ -156,7 +156,7 @@ public class MyDBManager extends SQLiteOpenHelper {
 //                wordsList.add(cursor.getString(cursor.getColumnIndex(COLUMN_TRANSLATION)));
 //            }
 //        }
-        db.close();
+        //db.close();
         return cursor;
     }
 
@@ -169,11 +169,11 @@ public class MyDBManager extends SQLiteOpenHelper {
     }
 
     // Return a specific word and its translation from the WORDS_TABLE
-    public List getWordAndTranslation(int i){
+    public List getWordAndTranslation(int i, int quizNum){
         List <String> dbString = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT "+ COLUMN_WORD +", "+ COLUMN_TRANSLATION+" FROM " + WORDS_TABLE +
-                        " WHERE " + COLUMN_ID + " = " + i;
+                        " WHERE " + COLUMN_ID + " = " + i + " AND " + COLUMN_QUIZ + " = " + quizNum;
 
         // Cursor points to a location in your results
         Cursor c = db.rawQuery(query, null);
@@ -209,7 +209,6 @@ public class MyDBManager extends SQLiteOpenHelper {
         db.insert(RESULTS_TABLE, null, values);
         db.close();
     }
-
 
 
 

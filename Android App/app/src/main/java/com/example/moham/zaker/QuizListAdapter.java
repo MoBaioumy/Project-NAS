@@ -21,47 +21,26 @@ public class QuizListAdapter extends ResourceCursorAdapter {
 
     public QuizListAdapter(Context context, Cursor cursor) {
         // ToDo: Make another layout for the quizzes
-        super(context, R.layout.word_entry_layout, cursor);
+        super(context, R.layout.quiz_entry_layout, cursor);
     }
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         // Get the Widgets
-        TextView textTitle = view.findViewById(R.id.word);
-        TextView textContent = view.findViewById(R.id.trans);
+        TextView textQuizTitle = view.findViewById(R.id.txt_quiz_title);
+        TextView textQuizContent = view.findViewById(R.id.txt_quiz_description);
+        TextView textQuizId = view.findViewById(R.id.txt_quiz_id);
 
+
+        // set the Title, description and quizId according to the dataBase entry
         String title = cursor.getString(cursor.getColumnIndex(MyDBManager.COLUMN_QUIZ_NAME));
-        textTitle.setText(title);
+        textQuizTitle.setText(title);
 
         String content = cursor.getString(cursor.getColumnIndex(MyDBManager.COLUMN_DESCRIPTION));
-        textContent.setText(content);
+        textQuizContent.setText(content);
+
+        String quidId = cursor.getString(cursor.getColumnIndex(MyDBManager.COLUMN_QUIZ_ID));
+        textQuizId.setText(quidId);
 
     }
-
-//    @NonNull
-//    @Override
-//    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-//        /**
-//         * This method is responsible to for getting the view and attaching it to the ListView
-//         */
-//        if (convertView == null) {
-//            convertView = LayoutInflater.from(getContext()).inflate(R.layout.quiz_entry_layout, parent, false);
-//        }
-//
-//        // get the attributes from the right Friend object
-//        Quiz currentQuiz = quizzes.get(position);
-//        String name = currentQuiz.getName();
-//        String description = currentQuiz.getDescription();
-//
-//        // get text and image view from the object and set them in the List view
-//        TextView textViewName = convertView.findViewById(R.id.Title);
-//        TextView imageViewFace = convertView.findViewById(R.id.description);
-//        TextView number = convertView.findViewById(R.id.Number);
-//        textViewName.setText(name);
-//        imageViewFace.setText(description);
-//        number.setText(Integer.toString(quizzes.size()));
-//        return convertView;
-//    }
-
-
 }

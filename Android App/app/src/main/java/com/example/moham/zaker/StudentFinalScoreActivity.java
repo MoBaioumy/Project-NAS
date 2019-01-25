@@ -28,7 +28,8 @@ public class StudentFinalScoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent (StudentFinalScoreActivity.this ,
-                                    StudentOverviewActivity.class);
+                                    StudentQuizListActivity.class);
+                backIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(backIntent);
             }
         });

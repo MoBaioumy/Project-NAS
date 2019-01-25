@@ -131,6 +131,7 @@ public class QuizInputActivity extends AppCompatActivity {
         Intent intent = new Intent(QuizInputActivity.this,
                         QuizInputFinishedActivity.class);
         // TODO: Pass the quiz_id as a parameter to the next Activity to view only the right quiz
+        intent.putExtra("quizNumber", quizNumber);
         startActivity(intent);
     }
 

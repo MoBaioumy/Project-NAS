@@ -37,13 +37,13 @@ public class StudentOverviewActivity extends AppCompatActivity {
             }
         });
 
-        // move to the quizzes page to solve quizzes and answer questions
+        // move to the quizzes page to quizzesList
         final Button quizzesButton = (Button) findViewById(R.id.btn_quizzes);
         quizzesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (StudentOverviewActivity.this,
-                                StudentQuizActivity.class);
+                                StudentQuizListActivity.class);
                 startActivity(intent);
             }
         });

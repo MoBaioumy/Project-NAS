@@ -1,5 +1,6 @@
 package com.example.moham.zaker;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,15 +16,24 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_input_finished);
 
+        Intent intent = getIntent();
+        int quizNumber = intent.getIntExtra("quizNumber", 1);
+
         // get ONLY the RIGHT words from the database; words with the right quiz_id
         db = MyDBManager.getInstance(getApplicationContext());
-        Cursor cursor = db.selectAllWords();
+        Cursor cursor = db.selectWordsFromQuiz(quizNumber);
 
         // Add all the words to list view using the adapter
         adapter = new WordListAdapter(getApplicationContext(), cursor);
         final ListView wordInputList = findViewById(R.id.list_input_words);
         wordInputList.setAdapter(adapter);
+    }
 
-        // TODo: the backButton should return you to the quizzes overview
+    // the backButton should return you to the quizzes overview
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this,TeacherQuizListActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

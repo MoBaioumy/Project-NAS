@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,12 +23,21 @@ public class StudentQuizActivity extends AppCompatActivity {
     public String randWord;
     int score = 0;
     int QUIZ_SIZE = 6;
+    public int quizNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_quiz_list);
+
+        Intent intent = getIntent();
+        quizNumber = intent.getIntExtra("quizNumber", 1);
+
+        // get ONLY the RIGHT words from the database; words with the right quiz_id
+        db = MyDBManager.getInstance(getApplicationContext());
+        Cursor cursor = db.selectWordsFromQuiz(quizNumber);
+
         i = 1;
 
         // ToDO: Add try except for when the database is still empty
@@ -42,7 +52,7 @@ public class StudentQuizActivity extends AppCompatActivity {
         db = MyDBManager.getInstance(getApplicationContext());
 
         // get a list with the words & translation. since it's only 2 items, a hash map is overkill
-        List cursor = db.getWordAndTranslation(i);
+        List cursor = db.getWordAndTranslation(i, quizNumber);
         TextView txt = (TextView) findViewById(R.id.textView9);
         word = (String) cursor.get(0);
         trans = (String) cursor.get(1);
@@ -50,7 +60,7 @@ public class StudentQuizActivity extends AppCompatActivity {
         // get a ransom translation as a test word
         Random rand = new Random();
         int n = rand.nextInt(6) + 1;
-        cursor = db.getWordAndTranslation(n);
+        cursor = db.getWordAndTranslation(n, quizNumber);
         randWord = (String) cursor.get(1);
 
         // Set the text for the question

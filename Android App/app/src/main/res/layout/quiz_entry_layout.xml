@@ -7,30 +7,33 @@
     android:weightSum="100">
 
     <TextView
-        android:id="@+id/Number"
+        android:id="@+id/txt_quiz_id"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_weight="66.6"
+        android:layout_weight="80"
         android:textAlignment="center"
         android:textSize="30sp" />
     
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="33.3"
+        android:layout_weight="20"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/Title"
+            android:id="@+id/txt_quiz_title"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:textAlignment="center" />
+            android:layout_height="35dp"
+            android:textAlignment="textStart"
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/txt_quiz_description"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:textAlignment="center" />
+            android:layout_height="25dp"
+            android:textAlignment="textStart"
+            android:paddingLeft="6dp"
+            android:textSize="12sp" />
 
     </LinearLayout>
 
