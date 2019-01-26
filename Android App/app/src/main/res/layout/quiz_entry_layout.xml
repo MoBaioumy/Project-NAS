@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_weight="80"
+        android:fontFamily="cursive"
+        android:text="1"
         android:textAlignment="center"
         android:textSize="30sp" />
     

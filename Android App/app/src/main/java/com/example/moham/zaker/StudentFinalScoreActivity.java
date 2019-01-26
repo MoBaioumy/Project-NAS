@@ -1,6 +1,7 @@
 package com.example.moham.zaker;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class StudentFinalScoreActivity extends AppCompatActivity {
+    private MyDBManager db;
+    String STUDENT_NAME = "Karel";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +20,14 @@ public class StudentFinalScoreActivity extends AppCompatActivity {
         // get the score from the quiz
         Intent intent = getIntent();
         int score = intent.getIntExtra("score", 1);
+        int quizId = intent.getIntExtra("quizId", 1);
 
         // set the final score text
         TextView txtScore = (TextView) findViewById(R.id.txt_final_score);
         txtScore.setText("Your score is " + score + "/10");
+
+        db = MyDBManager.getInstance(getApplicationContext());
+        db.addResult(score, quizId, STUDENT_NAME);
 
         // Button to move back to your quizzes
         Button restartQuizButton = (Button) findViewById(R.id.btn_done);

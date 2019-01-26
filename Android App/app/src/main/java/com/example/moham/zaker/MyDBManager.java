@@ -202,15 +202,12 @@ public class MyDBManager extends SQLiteOpenHelper {
     public void addResult(int result, int quiz_id, String studentName){
         ContentValues values = new ContentValues();
         values.put(COLUMN_RESULT, result);
-        values.put("#######quiz", quiz_id);
         values.put(COLUMN_STUDENT_NAME, studentName);
 
         SQLiteDatabase db = getWritableDatabase();
         db.insert(RESULTS_TABLE, null, values);
         db.close();
     }
-
-
 
 //    public Cursor selectWord() {
 //        String query = "select * from " + tableName + " where "+ KEY_USERNAME + " = '" + uname + "'";

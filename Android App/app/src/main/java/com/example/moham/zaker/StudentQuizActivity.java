@@ -95,8 +95,7 @@ public class StudentQuizActivity extends AppCompatActivity {
             Intent intent = new Intent (StudentQuizActivity.this,
                             StudentFinalScoreActivity.class);
             intent.putExtra("score", score);
-            // ToDO: fix code to add results
-            db.addResult(score, 1, "Karel Scheepstra");
+            intent.putExtra("quizId", quizNumber);
             startActivity(intent);
         }
 
