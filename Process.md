@@ -150,3 +150,10 @@ Sick
 - [ ] Make nice graphics 
 
 
+
+# Day 17 (27 Jan)
+
+- [ ] Add rotation functionality 
+- [ ] Issue #9 Fix onClick Listeners
+- [ ] Fix Back Navigation for all activities 
+
