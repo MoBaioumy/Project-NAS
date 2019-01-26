@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "716390935905",
+    "firebase_url": "https://zakerchatroom.firebaseio.com",
+    "project_id": "zakerchatroom",
+    "storage_bucket": "zakerchatroom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716390935905:android:40e6ca8f813857ef",
+        "android_client_info": {
+          "package_name": "com.example.moham.zaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716390935905-fe8m0uejt6hotia37ejpava1n6uil6b1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJJxfrDBVxRX3slOqnksw4k4n3qJwtxmk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
