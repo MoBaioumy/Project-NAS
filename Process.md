@@ -123,7 +123,30 @@ Sick
 # Day 15 (25 Jan)
 
 - [ ] Fix all created GitHub issues
+
 - [ ] Create student visualization as a bar chart for every quiz 
+
 - [ ] Create teacher visualization as a line graph with an option to change the student
+
 - [ ] Create community version for Teacher
+
 - [ ] Create community version for Student
+
+      ​
+
+
+
+# Day 16 (26 Jan)
+
+- [ ] Code to add words to a quiz
+- [ ] Allow adding a quiz from scratch
+- [ ] Group classes and Activities
+- [ ] Allow deleting words (only for teacher)
+- [ ] Allow deleting quizzes (only for teacher)
+- [ ] Publish words to the API
+- [ ] Publish quizzes to the API
+- [ ] Publish results to the API
+- [ ] Allow getting definitions from dictionary API  
+- [ ] Make nice graphics 
+
+
