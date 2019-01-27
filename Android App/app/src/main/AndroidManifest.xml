@@ -35,7 +35,8 @@
         <activity android:name=".QuizInputFinishedActivity" />
         <activity android:name=".StudentFinalScoreActivity" />
         <activity android:name=".StudentQuizListActivity" />
-        <activity android:name=".ChatRoomActivity"></activity>
+        <activity android:name=".ChatRoomActivity" />
+        <activity android:name=".WordsInputActivity"></activity>
     </application>
 
 </manifest>
