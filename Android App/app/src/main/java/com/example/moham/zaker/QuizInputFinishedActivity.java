@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class QuizInputFinishedActivity extends AppCompatActivity {
@@ -39,6 +40,19 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
                         WordsInputActivity.class);
                 intent.putExtra("quizNumber", quizNumber);
                 startActivity(intent);
+            }
+        });
+
+
+        wordInputList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+                MyDBManager.getInstance(getApplicationContext()).deleteWord(id);
+                MyDBManager database = db;
+                WordListAdapter entryAdapter = adapter;
+                entryAdapter.swapCursor(db.selectWordsFromQuiz(quizNumber));
+                return true;
             }
         });
 

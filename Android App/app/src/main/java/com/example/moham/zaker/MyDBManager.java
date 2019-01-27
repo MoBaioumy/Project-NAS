@@ -112,16 +112,15 @@ public class MyDBManager extends SQLiteOpenHelper {
         values.put(COLUMN_WORD, word.getName());
         values.put(COLUMN_TRANSLATION, word.getTranslation());
         values.put(COLUMN_QUIZ, word.getQuizNumber());
-//        values.put(COLUMN_QUIZ, quizId);
 
         SQLiteDatabase db = getWritableDatabase();
         db.insert(WORDS_TABLE, null, values);
         db.close();
     }
 
-    public void deleteWord(Word word){
+    public void deleteWord(long id){
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("DELETE FROM " + WORDS_TABLE + " WHERE " + COLUMN_WORD + "=\"" + word.getName()+ "\";");
+        db.delete(WORDS_TABLE, COLUMN_ID + " = ?", new String[] { String.valueOf(id)});
     }
 
 
@@ -198,6 +197,12 @@ public class MyDBManager extends SQLiteOpenHelper {
         db.insert(QUIZZES_TABLE, null, values);
         db.close();
     }
+
+    public void deleteQuiz(long id){
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(QUIZZES_TABLE, COLUMN_QUIZ_ID + " = ?", new String[] { String.valueOf(id)});
+    }
+
 
     public void addResult(int result, int quiz_id, String studentName){
         ContentValues values = new ContentValues();

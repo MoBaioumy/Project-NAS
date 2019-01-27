@@ -63,17 +63,19 @@ public class TeacherQuizListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         // ToDO: allow deleting items. Now it drops the whole database, make it only drop the right items
-//        quizList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-//                MyDBManager.getInstance(getApplicationContext()).onUpgrade(db.getWritableDatabase(), 1, 1);
-//                MyDBManager database = db;
-//                QuizListAdapter entryAdapter = adapter;
-//                entryAdapter.swapCursor(db.selectAllQuizzes());
-//                return true;
-//            }
-//        });
+        quizList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+                MyDBManager.getInstance(getApplicationContext()).deleteQuiz(id);
+                MyDBManager database = db;
+                QuizListAdapter entryAdapter = adapter;
+                entryAdapter.swapCursor(db.selectAllQuizzes());
+                return true;
+            }
+        });
 
     }
 }
