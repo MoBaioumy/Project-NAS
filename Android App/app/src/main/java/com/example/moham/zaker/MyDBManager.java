@@ -214,6 +214,23 @@ public class MyDBManager extends SQLiteOpenHelper {
         db.close();
     }
 
+    public List selectAllResults(){
+        List <Float> resultsList = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + RESULTS_TABLE + " WHERE  1",  null);
+
+        cursor.moveToFirst();
+
+        // loop through all the data the cursor has and append the words and translation to a list
+        while (!cursor.isAfterLast()){
+            if(cursor.getString(cursor.getColumnIndex(COLUMN_RESULT)) != null){
+                resultsList.add((float)cursor.getColumnIndex(COLUMN_RESULT));
+            }
+        }
+        db.close();
+        return resultsList;
+    }
+
 //    public Cursor selectWord() {
 //        String query = "select * from " + tableName + " where "+ KEY_USERNAME + " = '" + uname + "'";
 //        SQLiteDatabase sql = this.getReadableDatabase();

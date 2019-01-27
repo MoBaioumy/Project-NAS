@@ -1,5 +1,6 @@
 package com.example.moham.zaker;
 
+import android.database.Cursor;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,12 +14,14 @@ import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class StudentProgressActivity extends AppCompatActivity {
 
     private static final String TAG = "StudentProgressActivity";
     private LineChart mChart;
+    MyDBManager db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +37,26 @@ public class StudentProgressActivity extends AppCompatActivity {
         mChart.setDragEnabled(true);
         mChart.setScaleEnabled(true);
 
-        // TODO: add code to import results from the data base and visualize it
+
+        db = MyDBManager.getInstance(getApplicationContext());
+        List resultsList = db.selectAllResults();
+
+
+
         ArrayList<Entry> yValues = new ArrayList<>();
-        yValues.add(new Entry(0, 60f));
-        yValues.add(new Entry(1, 50f));
-        yValues.add(new Entry(2, 70f));
-        yValues.add(new Entry(3, 60f));
+
+
+
+        // TODO: add code to import results from the data base and visualize it
+
+//        yValues.add(new Entry(0, 60f));
+//        yValues.add(new Entry(1, 50f));
+//        yValues.add(new Entry(2, 70f));
+//        yValues.add(new Entry(3, 60f));
+        yValues.add(new Entry(0, (float)resultsList.get(0)));
+        yValues.add(new Entry(1, (float)resultsList.get(1)));
+        yValues.add(new Entry(2, (float)resultsList.get(2)));
+
 
 
         LineDataSet gradesSet = new LineDataSet(yValues, "Grades of Quizzes");
