@@ -108,6 +108,20 @@ public class QuizInputActivity extends AppCompatActivity {
             }
 
         });
+
+
+        // Listener for the animal button to create a list with words on objects found in a house
+        final Button emptyQuizButton = (Button) findViewById(R.id.btn_empty_quiz);
+        emptyQuizButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Word [] finalWordList = {};
+
+                addQuiz(new Quiz(title, content), finalWordList);
+
+            }
+
+        });
     }
 
     // method for add a quiz and moving to the next Activity

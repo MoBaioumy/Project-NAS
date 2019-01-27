@@ -139,16 +139,17 @@ Sick
 
 # Day 16 (26 Jan)
 
-- [ ] Code to add words to a quiz
-- [ ] Allow adding a quiz from scratch
+- [x] Code to add words to a quiz
+- [x] Allow adding a quiz from scratch
 - [ ] Group classes and Activities
-- [ ] Allow deleting words (only for teacher)
-- [ ] Allow deleting quizzes (only for teacher)
+- [x] Allow deleting words (only for teacher)
+- [x] Allow deleting quizzes (only for teacher)
 - [ ] ~~Publish words to the API~~
 - [ ] ~~Publish quizzes to the API~~
 - [ ] ~~Publish results to the API~~
       I won't create an API like we did in Trivia anymore. All the processing will be done with the local database. For future work, the same will be used only with a Real-time data base like the community function.
 - [ ] Allow getting definitions from dictionary API  
+      This will be put as **extra**
 - [ ] Make nice graphics 
 
 

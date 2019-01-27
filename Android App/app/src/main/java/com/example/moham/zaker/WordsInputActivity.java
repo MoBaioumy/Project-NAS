@@ -67,6 +67,7 @@ public class WordsInputActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(WordsInputActivity.this,
                         QuizInputFinishedActivity.class);
+                intent.putExtra("quizNumber", quizNumber);
                 startActivity(intent);
             }
         });
