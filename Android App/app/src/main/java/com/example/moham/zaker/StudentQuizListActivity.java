@@ -46,6 +46,5 @@ public class StudentQuizListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }
