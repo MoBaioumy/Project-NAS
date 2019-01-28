@@ -91,6 +91,9 @@ public class TeacherCommunityActivity extends AppCompatActivity {
                 roomList.clear();
                 roomList.addAll(chatRoomsSet);
                 arrayAdapter.notifyDataSetChanged();
+
+                // clear entered text
+                roomNameInput.setText("");
             }
             // when deleting an entry
             @Override

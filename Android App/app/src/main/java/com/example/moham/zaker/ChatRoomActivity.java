@@ -64,6 +64,9 @@ public class ChatRoomActivity extends AppCompatActivity {
                 messageMap.put("msg", messageInput.getText().toString());
 
                 message_root.updateChildren(messageMap);
+
+                // clear entered text
+                messageInput.setText("");
             }
         });
 

@@ -26,8 +26,6 @@ import java.util.Map;
 import java.util.Set;
 
 public class StudentCommunityActivity extends AppCompatActivity {
-
-
     private ListView listView;
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> chatRoomsList = new ArrayList<>();
@@ -54,7 +52,6 @@ public class StudentCommunityActivity extends AppCompatActivity {
          * Those children will be chat rooms. Within them we will have more children. These
          * will have the user name and the message as Key and Value.
          */
-
 
         // listeners for when the RealTime Database changes
         root.addValueEventListener(new ValueEventListener() {
