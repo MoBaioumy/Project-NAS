@@ -161,3 +161,9 @@ Sick
 - [ ] Fix Back Navigation for all activities 
 
 
+
+
+# Day 18 (28 Jan)
+
+- [ ] Test the app on users and get gather feedback
+- [ ] Investigate code for any bugs
