@@ -175,3 +175,9 @@ Sick
 
       All bugs have been added as issues on GitHub
 
+# Day 19 (29 Jan)
+
+- [ ] Fix the bugs discovered and implement the feedback 
+- [ ] Import graphics created with Photoshop and Adobe XD 
+- [ ] Fix themes, colors and design
+
