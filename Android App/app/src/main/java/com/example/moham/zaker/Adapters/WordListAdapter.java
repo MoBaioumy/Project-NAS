@@ -1,11 +1,13 @@
-package com.example.moham.zaker;
+package com.example.moham.zaker.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.view.View;
 import android.widget.ResourceCursorAdapter;
 import android.widget.TextView;
+
+import com.example.moham.zaker.Data.MyDBManager;
+import com.example.moham.zaker.R;
 
 public class WordListAdapter extends ResourceCursorAdapter {
 
