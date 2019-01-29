@@ -165,5 +165,13 @@ Sick
 
 # Day 18 (28 Jan)
 
-- [ ] Test the app on users and get gather feedback
-- [ ] Investigate code for any bugs
+- [x] **Test the app on users and gather feedback**
+      Clicking on chat rooms doesn't always works 
+      Within a ChatRoom put its name up top
+      Creating quizzes and adding words isn't completely obvious to non-experienced users
+
+- [x] **Investigate code for any bugs**
+      There are still issues with the StudentQuizActivity. Like the number of questions a student gets is hard coded to 6. 
+
+      All bugs have been added as issues on GitHub
+
