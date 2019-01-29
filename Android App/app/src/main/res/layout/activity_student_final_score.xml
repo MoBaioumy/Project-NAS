@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/general_background_middle"
     tools:context=".Activities.StudentFinalScoreActivity">
 
     <TextView
@@ -24,8 +25,9 @@
     <Button
         android:id="@+id/btn_done"
         android:layout_width="221dp"
-        android:layout_height="0dp"
+        android:layout_height="59dp"
         android:layout_marginTop="468dp"
+        android:background="@drawable/btn_long"
         android:text="Done!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

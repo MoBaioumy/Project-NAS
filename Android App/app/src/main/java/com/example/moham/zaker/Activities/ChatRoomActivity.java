@@ -59,12 +59,12 @@ public class ChatRoomActivity extends AppCompatActivity {
                 root.updateChildren(map);
 
                 // Add the name and message
-                DatabaseReference message_root = root.child(tempRandomKey);
+                DatabaseReference messageRoot = root.child(tempRandomKey);
                 Map<String,Object> messageMap = new HashMap<String, Object>();
                 messageMap.put("name", userName);
                 messageMap.put("msg", messageInput.getText().toString());
 
-                message_root.updateChildren(messageMap);
+                messageRoot.updateChildren(messageMap);
 
                 // clear entered text
                 messageInput.setText("");
