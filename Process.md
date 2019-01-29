@@ -142,6 +142,7 @@ Sick
 - [x] Code to add words to a quiz
 - [x] Allow adding a quiz from scratch
 - [ ] Group classes and Activities
+      Organizing code in different packages was done according to [CodePath Guide](https://guides.codepath.com/android/Organizing-your-Source-Files#organize-packages-by-category).
 - [x] Allow deleting words (only for teacher)
 - [x] Allow deleting quizzes (only for teacher)
 - [ ] ~~Publish words to the API~~

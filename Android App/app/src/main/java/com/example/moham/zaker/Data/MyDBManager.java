@@ -1,11 +1,13 @@
-package com.example.moham.zaker;
+package com.example.moham.zaker.Data;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.moham.zaker.Classes.Quiz;
+import com.example.moham.zaker.Classes.Word;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -201,6 +203,7 @@ public class MyDBManager extends SQLiteOpenHelper {
     public void deleteQuiz(long id){
         SQLiteDatabase db = getWritableDatabase();
         db.delete(QUIZZES_TABLE, COLUMN_QUIZ_ID + " = ?", new String[] { String.valueOf(id)});
+        db.close();
     }
 
 
@@ -214,17 +217,17 @@ public class MyDBManager extends SQLiteOpenHelper {
         db.close();
     }
 
-    public List selectAllResults(){
-        List <Float> resultsList = new ArrayList<>();
+    public ArrayList <Float> selectAllResults(){
+        ArrayList <Float> resultsList = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + RESULTS_TABLE + " WHERE  1",  null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + RESULTS_TABLE,  null);
 
         cursor.moveToFirst();
 
         // loop through all the data the cursor has and append the words and translation to a list
         while (!cursor.isAfterLast()){
-            if(cursor.getString(cursor.getColumnIndex(COLUMN_RESULT)) != null){
-                resultsList.add((float)cursor.getColumnIndex(COLUMN_RESULT));
+            if(cursor.getFloat(cursor.getColumnIndex(COLUMN_RESULT)) > 0){
+                resultsList.add((float)cursor.getFloat(cursor.getColumnIndex(COLUMN_RESULT)));
             }
         }
         db.close();

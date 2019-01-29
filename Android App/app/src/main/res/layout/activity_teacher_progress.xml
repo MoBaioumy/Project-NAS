@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TeacherProgressActivity">
+    tools:context=".Activities.TeacherProgressActivity">
     <com.jjoe64.graphview.GraphView
         android:paddingTop="30dp"
         android:layout_width="363dp"

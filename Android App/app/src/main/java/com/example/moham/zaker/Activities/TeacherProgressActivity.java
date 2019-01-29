@@ -1,10 +1,12 @@
-package com.example.moham.zaker;
+package com.example.moham.zaker.Activities;
 
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.moham.zaker.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;

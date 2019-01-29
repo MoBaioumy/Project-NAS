@@ -1,4 +1,4 @@
-package com.example.moham.zaker;
+package com.example.moham.zaker.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.moham.zaker.Data.MyDBManager;
+import com.example.moham.zaker.Classes.Quiz;
+import com.example.moham.zaker.R;
+import com.example.moham.zaker.Classes.Word;
 
 public class QuizInputActivity extends AppCompatActivity {
 
@@ -54,7 +59,7 @@ public class QuizInputActivity extends AppCompatActivity {
         animalsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Word [] finalWordList = {
+                Word[] finalWordList = {
                         new Word("donkey", "ezel"),
                         new Word("fish", "vis"),
                         new Word("horse", "paard"),

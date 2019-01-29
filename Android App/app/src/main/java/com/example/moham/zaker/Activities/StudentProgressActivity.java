@@ -1,21 +1,18 @@
-package com.example.moham.zaker;
+package com.example.moham.zaker.Activities;
 
-import android.database.Cursor;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.moham.zaker.Data.MyDBManager;
+import com.example.moham.zaker.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-import com.github.mikephil.charting.listener.OnChartGestureListener;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 public class StudentProgressActivity extends AppCompatActivity {
 
@@ -39,12 +36,10 @@ public class StudentProgressActivity extends AppCompatActivity {
 
 
         db = MyDBManager.getInstance(getApplicationContext());
-        List resultsList = db.selectAllResults();
-
+        ArrayList<Float> resultsList = db.selectAllResults();
 
 
         ArrayList<Entry> yValues = new ArrayList<>();
-
 
 
         // TODO: add code to import results from the data base and visualize it
@@ -53,9 +48,9 @@ public class StudentProgressActivity extends AppCompatActivity {
 //        yValues.add(new Entry(1, 50f));
 //        yValues.add(new Entry(2, 70f));
 //        yValues.add(new Entry(3, 60f));
-        yValues.add(new Entry(0, (float)resultsList.get(0)));
-        yValues.add(new Entry(1, (float)resultsList.get(1)));
-        yValues.add(new Entry(2, (float)resultsList.get(2)));
+        yValues.add(new Entry(0, resultsList.get(0)));
+        yValues.add(new Entry(1, resultsList.get(1)));
+        yValues.add(new Entry(2, resultsList.get(2)));
 
 
 

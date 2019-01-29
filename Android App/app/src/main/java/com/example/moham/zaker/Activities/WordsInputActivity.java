@@ -1,4 +1,4 @@
-package com.example.moham.zaker;
+package com.example.moham.zaker.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,10 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.moham.zaker.Data.MyDBManager;
+import com.example.moham.zaker.R;
+import com.example.moham.zaker.Classes.Word;
 
 public class WordsInputActivity extends AppCompatActivity {
 

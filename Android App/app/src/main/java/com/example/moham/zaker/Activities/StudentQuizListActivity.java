@@ -1,4 +1,4 @@
-package com.example.moham.zaker;
+package com.example.moham.zaker.Activities;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
+
+import com.example.moham.zaker.Data.MyDBManager;
+import com.example.moham.zaker.Adapters.QuizListAdapter;
+import com.example.moham.zaker.R;
 
 public class StudentQuizListActivity extends AppCompatActivity {
     private MyDBManager db;
