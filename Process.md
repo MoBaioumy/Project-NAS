@@ -125,9 +125,9 @@ Sick
 - [x] Fix created GitHub issues
       Most issues have been fixed.
 
-- [ ] Create student visualization as a bar chart for every quiz 
+- [x] Create student visualization as a bar chart for every quiz 
 
-- [ ] Create teacher visualization as a line graph with an option to change the student
+- [x] Create teacher visualization as a line graph with an option to change the student
 
 - [x] Create community version for Teacher
 
@@ -141,7 +141,7 @@ Sick
 
 - [x] Code to add words to a quiz
 - [x] Allow adding a quiz from scratch
-- [ ] Group classes and Activities
+- [x] Group classes and Activities
       Organizing code in different packages was done according to [CodePath Guide](https://guides.codepath.com/android/Organizing-your-Source-Files#organize-packages-by-category).
 - [x] Allow deleting words (only for teacher)
 - [x] Allow deleting quizzes (only for teacher)
@@ -149,9 +149,9 @@ Sick
 - [ ] ~~Publish quizzes to the API~~
 - [ ] ~~Publish results to the API~~
       I won't create an API like we did in Trivia anymore. All the processing will be done with the local database. For future work, the same will be used only with a Real-time data base like the community function.
-- [ ] Allow getting definitions from dictionary API  
+- [ ] ~~Allow getting definitions from dictionary API~~  
       This will be put as **extra**
-- [ ] Make nice graphics 
+- [x] Make nice graphics 
 
 
 
@@ -179,6 +179,6 @@ Sick
 # Day 19 (29 Jan)
 
 - [ ] Fix the bugs discovered and implement the feedback 
-- [ ] Import graphics created with Photoshop and Adobe XD 
+- [x] Import graphics created with Photoshop and Adobe XD 
 - [ ] Fix themes, colors and design
 
