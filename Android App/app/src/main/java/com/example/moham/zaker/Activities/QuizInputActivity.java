@@ -53,80 +53,6 @@ public class QuizInputActivity extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
         });
-
-        // Listener for the animal button to create a list with words on animals
-        final Button animalsButton = (Button) findViewById(R.id.btn_animals);
-        animalsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Word[] finalWordList = {
-                        new Word("donkey", "ezel"),
-                        new Word("fish", "vis"),
-                        new Word("horse", "paard"),
-                        new Word("horse", "paard"),
-                        new Word("horse", "paard"),
-                        new Word("horse", "paard"),
-                        new Word("horse", "paard"),
-                        new Word("lion", "leeuw")};
-
-                addQuiz(new Quiz(title, content), finalWordList);
-
-            }
-        });
-
-        // Listener for the animal button to create a list with words on greetings
-        final Button greetingsButton = (Button) findViewById(R.id.btn_greetings);
-        greetingsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Word [] finalWordList = {
-                        new Word("Good morning!", "Goede Morgen!"),
-                        new Word("Good afternoon!", "Goede Middag!"),
-                        new Word("Good afternoon!", "Goede Middag!"),
-                        new Word("Good afternoon!", "Goede Middag!"),
-                        new Word("Good afternoon!", "Goede Middag!"),
-                        new Word("Good afternoon!", "Goede Middag!"),
-                        new Word("Good afternoon!", "Goede Middag!"),
-                        new Word("Good evening!", "Goeden avond!")};
-
-                addQuiz(new Quiz(title, content), finalWordList);
-            }
-        });
-
-        // Listener for the animal button to create a list with words on objects found in a house
-        final Button houseButton = (Button) findViewById(R.id.btn_house);
-        houseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Word [] finalWordList = {
-                        new Word("chair", "stoel"),
-                        new Word("table", "tafel"),
-                        new Word("room", "kamer"),
-                        new Word("drapes", "gordijnen"),
-                        new Word("carpet", "tapijt"),
-                        new Word("carpet", "tapijt"),
-                        new Word("roof", "dak"),
-                        new Word("house", "huis")};
-
-
-                addQuiz(new Quiz(title, content), finalWordList);
-            }
-
-        });
-
-
-        // Listener for the animal button to create a list with words on objects found in a house
-        final Button emptyQuizButton = (Button) findViewById(R.id.btn_empty_quiz);
-        emptyQuizButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Word [] finalWordList = {};
-
-                addQuiz(new Quiz(title, content), finalWordList);
-
-            }
-
-        });
     }
 
     // method for add a quiz and moving to the next Activity
@@ -162,6 +88,63 @@ public class QuizInputActivity extends AppCompatActivity {
         Toast.makeText(this, "Please provide both the name and description!",
                 Toast.LENGTH_LONG).show();
         return false;
+    }
+
+    public void onClicked(View v){
+
+        // convert view to checkbox and get its value
+        Button button = (Button) v;
+        String buttonText = button.getText().toString();
+
+        // loop over all the body parts and sets to visible and colored if checked
+        if (buttonText.equals("Animals")){
+            Word[] finalWordList = {
+                    new Word("donkey", "ezel"),
+                    new Word("fish", "vis"),
+                    new Word("horse", "paard"),
+                    new Word("horse", "paard"),
+                    new Word("horse", "paard"),
+                    new Word("horse", "paard"),
+                    new Word("horse", "paard"),
+                    new Word("lion", "leeuw")};
+
+            addQuiz(new Quiz(title, content), finalWordList);
+        }
+        else if (buttonText.equals("House")){
+            Word [] finalWordList = {
+                    new Word("chair", "stoel"),
+                    new Word("table", "tafel"),
+                    new Word("room", "kamer"),
+                    new Word("drapes", "gordijnen"),
+                    new Word("carpet", "tapijt"),
+                    new Word("carpet", "tapijt"),
+                    new Word("roof", "dak"),
+                    new Word("house", "huis")};
+
+
+            addQuiz(new Quiz(title, content), finalWordList);
+        }
+
+        else if (buttonText.equals("Basics")){
+            Word [] finalWordList = {
+                    new Word("Good morning!", "Goede Morgen!"),
+                    new Word("Good afternoon!", "Goede Middag!"),
+                    new Word("Good afternoon!", "Goede Middag!"),
+                    new Word("Good afternoon!", "Goede Middag!"),
+                    new Word("Good afternoon!", "Goede Middag!"),
+                    new Word("Good afternoon!", "Goede Middag!"),
+                    new Word("Good afternoon!", "Goede Middag!"),
+                    new Word("Good evening!", "Goeden avond!")};
+
+            addQuiz(new Quiz(title, content), finalWordList);
+        }
+
+        else if (buttonText.equals("Empty")){
+            Word [] finalWordList = {};
+
+            addQuiz(new Quiz(title, content), finalWordList);
+        }
+
     }
 
 }

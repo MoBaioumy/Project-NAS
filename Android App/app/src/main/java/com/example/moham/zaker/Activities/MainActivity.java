@@ -16,28 +16,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // button for the sample teacher overview
-        final Button philipButton = (Button) findViewById(R.id.btn_philip);
-        philipButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (MainActivity.this , TeacherOverviewActivity.class);
-                startActivity(intent);
+        // button for the sample teacher and student overview
+        final Button teacherButton = (Button) findViewById(R.id.btn_philip);
+        teacherButton.setOnClickListener(new TeacherButtonClickListener());
 
-            }
-        });
-
-        final Button KarelButton = (Button) findViewById(R.id.btn_karel);
-        KarelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (MainActivity.this , StudentOverviewActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // drop the data base and create an empty new one
-//        MyDBManager db = MyDBManager.getInstance(getApplicationContext());
-//        db.onUpgrade(db.getWritableDatabase(), 1, 1);
+        final Button studentButton = (Button) findViewById(R.id.btn_karel);
+        studentButton.setOnClickListener(new StudentButtonClickListener());
     }
+
+    private class StudentButtonClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            // Move to the studentActivity
+            Intent intent = new Intent (MainActivity.this,
+                            StudentOverviewActivity.class);
+            startActivity(intent);
+        }
+    }
+
+    private class TeacherButtonClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            // Move to the TeacherActivity
+            Intent intent = new Intent (MainActivity.this,
+                            TeacherOverviewActivity.class);
+            startActivity(intent);
+        }
+    }
+
+
 }

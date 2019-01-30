@@ -27,14 +27,7 @@ public class TeacherQuizListActivity extends AppCompatActivity {
 
         // set FAB for creating a new quiz
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(TeacherQuizListActivity.this,
-                                QuizInputActivity.class);
-                startActivity(intent);
-            }
-        });
+        fab.setOnClickListener(new FABonClickListener());
 
         // get all quizzes from the database, QUIZZES_TABLE
         db = MyDBManager.getInstance(getApplicationContext());
@@ -75,7 +68,15 @@ public class TeacherQuizListActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
 
-
+    private class FABonClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            // code to run when the button gets clicked
+            Intent intent = new Intent(TeacherQuizListActivity.this,
+                    QuizInputActivity.class);
+            startActivity(intent);
+        }
     }
 }

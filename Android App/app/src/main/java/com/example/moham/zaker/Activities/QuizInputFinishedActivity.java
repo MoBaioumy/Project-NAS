@@ -17,6 +17,7 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
 
     private MyDBManager db;
     private WordListAdapter adapter;
+    public int quizNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_input_finished);
 
         Intent intent = getIntent();
-        final int quizNumber = intent.getIntExtra("quizNumber", 1);
+        quizNumber = intent.getIntExtra("quizNumber", 1);
 
         // get ONLY the RIGHT words from the database; words with the right quiz_id
         db = MyDBManager.getInstance(getApplicationContext());
@@ -59,10 +60,6 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-
-
-
     }
 
     // the backButton should return you to the quizzes overview
@@ -71,5 +68,16 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
         Intent intent = new Intent(this,TeacherQuizListActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+    }
+
+    private class FABonClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            // code to run when the button gets clicked
+            Intent intent = new Intent(QuizInputFinishedActivity.this,
+                    WordsInputActivity.class);
+            intent.putExtra("quizNumber", quizNumber);
+            startActivity(intent);
+        }
     }
 }

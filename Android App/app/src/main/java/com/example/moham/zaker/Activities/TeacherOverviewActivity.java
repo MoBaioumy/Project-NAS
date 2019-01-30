@@ -48,4 +48,30 @@ public class TeacherOverviewActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void onClicked(View v){
+
+        // convert view to checkbox and get its value
+        Button button = (Button) v;
+        String buttonText = button.getText().toString();
+
+        // loop over all the body parts and sets to visible and colored if checked
+        if (buttonText.equals("Teaching Material")){
+            Intent intent = new Intent (TeacherOverviewActivity.this,
+                    TeacherQuizListActivity.class);
+            startActivity(intent);
+        }
+        else if (buttonText.equals("Class Analysis")){
+            Intent intent = new Intent (TeacherOverviewActivity.this,
+                    TeacherProgressActivity.class);
+            startActivity(intent);
+        }
+
+        else if (buttonText.equals("Community")){
+            Intent intent = new Intent (TeacherOverviewActivity.this,
+                    TeacherCommunityActivity.class);
+            startActivity(intent);
+        }
+
+    }
 }

@@ -21,8 +21,6 @@ public class StudentQuizListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_quiz_list2);
 
-        // ToDo: put this activity between StudentOverview and StudentQuiz
-
         // get all quizzes from the database, QUIZZES_TABLE
         db = MyDBManager.getInstance(getApplicationContext());
         Cursor cursor = db.selectAllQuizzes();

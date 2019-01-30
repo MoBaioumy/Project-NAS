@@ -18,6 +18,9 @@ public class WordsInputActivity extends AppCompatActivity {
     String currentWord;
     String currentTranslation;
     private MyDBManager db;
+    public int quizNumber;
+    public EditText wordInput;
+    public EditText translationInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +29,11 @@ public class WordsInputActivity extends AppCompatActivity {
 
         // Get quizId from previous List
         Intent intent = getIntent();
-        final int quizNumber = intent.getIntExtra("quizNumber", 1);
+        quizNumber = intent.getIntExtra("quizNumber", 1);
 
         // Get widgets
-        final EditText wordInput = findViewById(R.id.edit_txt_word);
-        final EditText translationInput = findViewById(R.id.edit_txt_translation);
+        wordInput = findViewById(R.id.edit_txt_word);
+        translationInput = findViewById(R.id.edit_txt_translation);
 
         wordInput.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {
@@ -52,28 +55,32 @@ public class WordsInputActivity extends AppCompatActivity {
         Button addWordButton = findViewById(R.id.btn_new_word);
         Button submitWordsButton = findViewById(R.id.btn_submit_words);
 
-        addWordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                MyDBManager.getInstance(getApplicationContext()).addWord
-                        (new Word(currentWord, currentTranslation, quizNumber));
-
-                // empty the text fields
-                wordInput.setText("");
-                translationInput.setText("");
-            }
-        });
-
-        submitWordsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(WordsInputActivity.this,
-                        QuizInputFinishedActivity.class);
-                intent.putExtra("quizNumber", quizNumber);
-                startActivity(intent);
-            }
-        });
+        addWordButton.setOnClickListener(new AddWordButtonClickListener());
+        submitWordsButton.setOnClickListener(new SubmitButtonClickListener());
     }
+
+    private class SubmitButtonClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(WordsInputActivity.this,
+                    QuizInputFinishedActivity.class);
+            intent.putExtra("quizNumber", quizNumber);
+            startActivity(intent);
+        }
+    }
+
+    private class AddWordButtonClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            MyDBManager.getInstance(getApplicationContext()).addWord
+                    (new Word(currentWord, currentTranslation, quizNumber));
+
+            // empty the text fields
+            wordInput.setText("");
+            translationInput.setText("");
+        }
+    }
+
+
 }
