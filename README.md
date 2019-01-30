@@ -35,9 +35,8 @@ A student can join a class created by a teacher. From that he get access to time
 
 ![](https://github.com/artix15/Project-NAS/blob/master/Doc/ScoreAfterQuiz.png) ![](https://github.com/artix15/Project-NAS/blob/master/Doc/StudentGraph.png)
 
-See the prototype of the app.
 
-Machine Learning tools and their source code.
-
-Acknowledgements. 
-
+Acknowledgements:
+- [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart/wiki) lib
+- [GraphView](https://github.com/jjoe64/GraphView)
+- Google Firebase
