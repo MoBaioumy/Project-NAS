@@ -22,7 +22,7 @@ public class StudentQuizActivity extends AppCompatActivity {
     public String trans;
     public String randWord;
     int score = 0;
-    int QUIZ_SIZE = 6;
+    int QUIZ_SIZE;
     public int quizNumber;
 
     @Override
@@ -38,13 +38,9 @@ public class StudentQuizActivity extends AppCompatActivity {
         db = MyDBManager.getInstance(getApplicationContext());
         Cursor cursor = db.selectWordsFromQuiz(quizNumber);
 
+        // Initiallize iterator to one
         i = 1;
-
-        // ToDO: Add try except for when the database is still empty
         nextWord();
-
-//        Toast.makeText("", )
-
     }
 
     public void nextWord(){
@@ -53,13 +49,13 @@ public class StudentQuizActivity extends AppCompatActivity {
 
         // get a list with the words & translation. since it's only 2 items, a hash map is overkill
         List cursor = db.getWordAndTranslation(i, quizNumber);
-        TextView txt = (TextView) findViewById(R.id.textView9);
+        TextView txt = (TextView) findViewById(R.id.txt_question);
         word = (String) cursor.get(0);
         trans = (String) cursor.get(1);
 
         // get a ransom translation as a test word
         Random rand = new Random();
-        int n = rand.nextInt(6) + 1;
+        int n = rand.nextInt(QUIZ_SIZE) + 1;
         cursor = db.getWordAndTranslation(n, quizNumber);
         randWord = (String) cursor.get(1);
 
