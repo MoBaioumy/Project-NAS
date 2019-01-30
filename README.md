@@ -33,7 +33,7 @@ This app should allow them to create question and teaching material as easily as
 
 A student can join a class created by a teacher. From that he get access to timed homework set by his teacher and practice material on the topic. The method will be to **"Teach for Mastery"**. So a student will remain in a section until he can properly answer all types of questions in that section. 
 
-![]() ![](https://github.com/artix15/Project-NAS/blob/master/Doc/StudentGraph.png)
+![](https://github.com/artix15/Project-NAS/blob/master/Doc/StudentOverview.png) ![](https://github.com/artix15/Project-NAS/blob/master/Doc/StudentGraph.png)
 
 See the prototype of the app.
 
