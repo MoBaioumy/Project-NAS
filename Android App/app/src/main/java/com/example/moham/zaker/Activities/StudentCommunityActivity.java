@@ -71,10 +71,9 @@ public class StudentCommunityActivity extends AppCompatActivity {
                 chatRoomsList.addAll(chatRoomsSet);
                 arrayAdapter.notifyDataSetChanged();
             }
-            // when deleting an entry
+            // when deleting an entry, student can't delete an Entry
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                // ToDO: Allow deleting a chat room
             }
         });
 

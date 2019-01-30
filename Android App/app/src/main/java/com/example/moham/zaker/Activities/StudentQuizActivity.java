@@ -27,7 +27,6 @@ public class StudentQuizActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_quiz_list);
 
@@ -38,7 +37,7 @@ public class StudentQuizActivity extends AppCompatActivity {
         db = MyDBManager.getInstance(getApplicationContext());
         Cursor cursor = db.selectWordsFromQuiz(quizNumber);
 
-        // Initiallize iterator to one
+        // Initialize iterator to one
         i = 1;
         nextWord();
     }
@@ -67,7 +66,6 @@ public class StudentQuizActivity extends AppCompatActivity {
     public void onClick(View v){
         Button button = (Button) v;
         String btn_text = (String) button.getText();
-
         TextView txtScore = (TextView) findViewById(R.id.text_score);
 
         // if answered correctly, increase score
@@ -85,8 +83,6 @@ public class StudentQuizActivity extends AppCompatActivity {
         nextWord();
 
         // After the quiz size is reached, report score and move to next activity
-
-        // maybe try, catch so that when quiz is over, move to the next
         if (i == QUIZ_SIZE){
             Intent intent = new Intent (StudentQuizActivity.this,
                             StudentFinalScoreActivity.class);

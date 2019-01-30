@@ -69,7 +69,7 @@ public class MyDBManager extends SQLiteOpenHelper {
         String queryResultsTable = "CREATE TABLE " + RESULTS_TABLE + "(" +
                 COLUMN_ID_T3 + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_STUDENT_NAME + " TEXT, " +
-                COLUMN_RESULT + " REAL " +
+                COLUMN_RESULT + " TEXT " +
                 ");";
         db.execSQL(queryResultsTable);
     }
@@ -92,9 +92,6 @@ public class MyDBManager extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + QUIZZES_TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + RESULTS_TABLE);
         onCreate(db);
-
-        //addWord(new Word("new", "nieuw", 1));
-        //addQuiz(new Quiz("test", "for testing"));
     }
 
 
@@ -146,18 +143,6 @@ public class MyDBManager extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + WORDS_TABLE + " WHERE " +
                         COLUMN_QUIZ + " = " + quiz_id, null);
-
-//        cursor.moveToFirst();
-
-        // loop through all the data the cursor has and append the words and translation to a list
-//        while (!cursor.isAfterLast()){
-//            if(cursor.getString(cursor.getColumnIndex(COLUMN_WORD)) != null){
-//
-//                wordsList.add(cursor.getString(cursor.getColumnIndex(COLUMN_WORD)));
-//                wordsList.add(cursor.getString(cursor.getColumnIndex(COLUMN_TRANSLATION)));
-//            }
-//        }
-        //db.close();
         return cursor;
     }
 
@@ -217,12 +202,10 @@ public class MyDBManager extends SQLiteOpenHelper {
         db.close();
     }
 
-    public ArrayList <Float> selectAllResults(){
+    public ArrayList <Float>  selectAllResults(){
         ArrayList <Float> resultsList = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + RESULTS_TABLE,  null);
-
-        cursor.moveToFirst();
 
         // loop through all the data the cursor has and append the words and translation to a list
         while (!cursor.isAfterLast()){
@@ -234,12 +217,6 @@ public class MyDBManager extends SQLiteOpenHelper {
         return resultsList;
     }
 
-//    public Cursor selectWord() {
-//        String query = "select * from " + tableName + " where "+ KEY_USERNAME + " = '" + uname + "'";
-//        SQLiteDatabase sql = this.getReadableDatabase();
-//        Cursor cur = sql.rawQuery(query, null);
-//        return cur;
-//    }
 
 
 }

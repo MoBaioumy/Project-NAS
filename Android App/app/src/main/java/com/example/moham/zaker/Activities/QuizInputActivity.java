@@ -75,7 +75,7 @@ public class QuizInputActivity extends AppCompatActivity {
         // move to the next Activity
         Intent intent = new Intent(QuizInputActivity.this,
                         QuizInputFinishedActivity.class);
-        // TODO: Pass the quiz_id as a parameter to the next Activity to view only the right quiz
+        // Pass the quiz_id as a parameter to the next Activity to view only the right quiz
         intent.putExtra("quizNumber", quizNumber);
         startActivity(intent);
     }
@@ -91,32 +91,28 @@ public class QuizInputActivity extends AppCompatActivity {
     }
 
     public void onClicked(View v){
-
         // convert view to checkbox and get its value
         Button button = (Button) v;
         String buttonText = button.getText().toString();
 
-        // loop over all the body parts and sets to visible and colored if checked
+        // Depending on the button, add the appropriate quiz
         if (buttonText.equals("Animals")){
             Word[] finalWordList = {
                     new Word("donkey", "ezel"),
                     new Word("fish", "vis"),
                     new Word("horse", "paard"),
-                    new Word("horse", "paard"),
-                    new Word("horse", "paard"),
-                    new Word("horse", "paard"),
-                    new Word("horse", "paard"),
                     new Word("lion", "leeuw")};
 
             addQuiz(new Quiz(title, content), finalWordList);
         }
+
+        // Quiz with objects found in a house
         else if (buttonText.equals("House")){
             Word [] finalWordList = {
                     new Word("chair", "stoel"),
                     new Word("table", "tafel"),
                     new Word("room", "kamer"),
                     new Word("drapes", "gordijnen"),
-                    new Word("carpet", "tapijt"),
                     new Word("carpet", "tapijt"),
                     new Word("roof", "dak"),
                     new Word("house", "huis")};
@@ -125,20 +121,17 @@ public class QuizInputActivity extends AppCompatActivity {
             addQuiz(new Quiz(title, content), finalWordList);
         }
 
+        // Quiz with greetings
         else if (buttonText.equals("Basics")){
             Word [] finalWordList = {
                     new Word("Good morning!", "Goede Morgen!"),
-                    new Word("Good afternoon!", "Goede Middag!"),
-                    new Word("Good afternoon!", "Goede Middag!"),
-                    new Word("Good afternoon!", "Goede Middag!"),
-                    new Word("Good afternoon!", "Goede Middag!"),
-                    new Word("Good afternoon!", "Goede Middag!"),
                     new Word("Good afternoon!", "Goede Middag!"),
                     new Word("Good evening!", "Goeden avond!")};
 
             addQuiz(new Quiz(title, content), finalWordList);
         }
 
+        // Empty quiz
         else if (buttonText.equals("Empty")){
             Word [] finalWordList = {};
 

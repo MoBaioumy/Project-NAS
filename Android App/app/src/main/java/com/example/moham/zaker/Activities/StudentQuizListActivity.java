@@ -30,6 +30,7 @@ public class StudentQuizListActivity extends AppCompatActivity {
         final ListView quizList = findViewById(R.id.list_quiz_student);
         quizList.setAdapter(adapter);
 
+        // NO INNER CLASS IS USER HERE, SEE PROGRESS.md (17 Jan)
         quizList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

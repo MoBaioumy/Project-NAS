@@ -24,6 +24,7 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_input_finished);
 
+        // Ger quiz number from previous Activity
         Intent intent = getIntent();
         quizNumber = intent.getIntExtra("quizNumber", 1);
 
@@ -36,23 +37,14 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
         final ListView wordInputList = findViewById(R.id.list_input_words);
         wordInputList.setAdapter(adapter);
 
-
+        // FAB to add more words
         FloatingActionButton fab = findViewById(R.id.fab_add_words);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(QuizInputFinishedActivity.this,
-                        WordsInputActivity.class);
-                intent.putExtra("quizNumber", quizNumber);
-                startActivity(intent);
-            }
-        });
-
+        fab.setOnClickListener(new FABonClickListener());
 
         wordInputList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-
+                // Delete word from the database and refresh
                 MyDBManager.getInstance(getApplicationContext()).deleteWord(id);
                 MyDBManager database = db;
                 WordListAdapter entryAdapter = adapter;
@@ -70,6 +62,7 @@ public class QuizInputFinishedActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // Inner class for FAB listener
     private class FABonClickListener implements View.OnClickListener {
         @Override
         public void onClick(View view) {

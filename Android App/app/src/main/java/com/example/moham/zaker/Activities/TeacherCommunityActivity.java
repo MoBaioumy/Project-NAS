@@ -114,37 +114,5 @@ public class TeacherCommunityActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
-
-
-
-    // Prompt the user to enter a name
-//    private void request_user_name() {
-//        // Show an alert to ask for the name
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        builder.setTitle("Enter name:");
-//
-//        final EditText input_field = new EditText(this);
-//
-//        builder.setView(input_field);
-//
-//        // If a name is provided, let the user pass after pressing Ok
-//        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//                name = input_field.getText().toString();
-//            }
-//        });
-//        // If a no name is provided, prompt again
-//        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//                dialogInterface.cancel();
-//                request_user_name();
-//            }
-//        });
-//
-//        builder.show();
-//    }
 }

@@ -24,7 +24,6 @@ public class ChatRoomActivity extends AppCompatActivity {
     private Button sendMessageButton;
     private EditText messageInput;
     private TextView chatText;
-
     private String userName,roomName;
     private DatabaseReference root ;
     private String tempRandomKey;

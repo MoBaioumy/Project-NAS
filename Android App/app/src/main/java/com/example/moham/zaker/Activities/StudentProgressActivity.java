@@ -1,23 +1,30 @@
 package com.example.moham.zaker.Activities;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.moham.zaker.Data.MyDBManager;
 import com.example.moham.zaker.R;
+import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
 public class StudentProgressActivity extends AppCompatActivity {
 
     private static final String TAG = "StudentProgressActivity";
-    private LineChart mChart;
+    private BarChart barChart;
     MyDBManager db;
 
     @Override
@@ -25,50 +32,34 @@ public class StudentProgressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_progress);
 
+        // gat widget
+        barChart = (BarChart) findViewById(R.id.chart);
 
-        mChart = (LineChart) findViewById(R.id.chart);
+        // set chart attributes
+        barChart.setDrawBarShadow(false);
+        barChart.setDrawValueAboveBar(true);
+        barChart.setMaxVisibleValueCount(50);
+        barChart.setPinchZoom(false);
+        barChart.setDrawGridBackground(true);
 
-//        mChart.setOnChartGestureListener(StudentProgressActivity.this);
-//        mChart.setOnChartValueSelectedListener(StudentProgressActivity.this);
+        // Create entry array for entries
+        ArrayList<BarEntry> barEntries = new ArrayList<>();
 
-        mChart.setDragEnabled(true);
-        mChart.setScaleEnabled(true);
-
-
+        // Get all results from database
         db = MyDBManager.getInstance(getApplicationContext());
         ArrayList<Float> resultsList = db.selectAllResults();
 
+        // Add all the results to the graph
+        for (int i = 1; i < resultsList.size(); i++){
+            barEntries.add(new BarEntry(i, (float)resultsList.get(i)));
+        }
 
-        ArrayList<Entry> yValues = new ArrayList<>();
-
-
-        // TODO: add code to import results from the data base and visualize it
-
-//        yValues.add(new Entry(0, 60f));
-//        yValues.add(new Entry(1, 50f));
-//        yValues.add(new Entry(2, 70f));
-//        yValues.add(new Entry(3, 60f));
-        yValues.add(new Entry(0, resultsList.get(0)));
-        yValues.add(new Entry(1, resultsList.get(1)));
-        yValues.add(new Entry(2, resultsList.get(2)));
-
-
-
-        LineDataSet gradesSet = new LineDataSet(yValues, "Grades of Quizzes");
-
-        gradesSet.setFillAlpha(130);
-        gradesSet.setLineWidth(4f);
-        gradesSet.setColor(Color.BLUE);
-        gradesSet.setValueTextColor(Color.BLACK);
-        gradesSet.setValueTextSize(20f);
-
-
-        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-        dataSets.add(gradesSet);
-
-        LineData allData = new LineData(dataSets);
-
-        mChart.setData(allData);
+        // Create data set, assign colors and display the graph
+        BarDataSet gradesSet = new BarDataSet(barEntries, "Grades of Quizzes");
+        gradesSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        BarData data = new BarData(gradesSet);
+        data.setBarWidth(0.9f);
+        barChart.setData(data);
 
     }
 }

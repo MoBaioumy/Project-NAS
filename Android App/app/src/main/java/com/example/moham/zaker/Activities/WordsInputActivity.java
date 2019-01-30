@@ -35,6 +35,7 @@ public class WordsInputActivity extends AppCompatActivity {
         wordInput = findViewById(R.id.edit_txt_word);
         translationInput = findViewById(R.id.edit_txt_translation);
 
+        // User anonymous listeners (See progress 17 Jan)
         wordInput.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {
                 currentWord = s.toString();
@@ -51,11 +52,11 @@ public class WordsInputActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
         });
 
-
+        // Get widgets
         Button addWordButton = findViewById(R.id.btn_new_word);
         Button submitWordsButton = findViewById(R.id.btn_submit_words);
 
-
+        // Add word and submit listeners
         addWordButton.setOnClickListener(new AddWordButtonClickListener());
         submitWordsButton.setOnClickListener(new SubmitButtonClickListener());
     }
