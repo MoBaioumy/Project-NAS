@@ -21,7 +21,7 @@ This app should allow them to create question and teaching material as easily as
 
  ![](https://github.com/artix15/Project-NAS/blob/master/Doc/TeacherOverview.png) ![](https://github.com/artix15/Project-NAS/blob/master/Doc/QuizList.png)
  
- ![](https://github.com/artix15/Project-NAS/blob/master/Doc/TeacherGraph.png)  ![](https://github.com/artix15/Project-NAS/blob/master/Doc/AddQuiz.png)
+ ![]()  ![](https://github.com/artix15/Project-NAS/blob/master/Doc/AddQuiz.png)
 
 
 
