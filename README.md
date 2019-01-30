@@ -21,6 +21,8 @@ Having a general database for all teacher also doesn't work since every school a
 
 This app should allow them to create question and teaching material as easily as taking a picture of that booklet. With a nice user interface they can edit entries, add them of delete them. For a specific class a code will be generated so that student can register for their class. 
 
+![](https://github.com/artix15/Project-NAS/blob/master/Doc/IntroActivity.png) ![](https://github.com/artix15/Project-NAS/blob/master/Doc/TeacherOverview.png)
+
 
 
 **For the class, a teacher should be able to see progress, set up homework with expiring dates and see the most common mistakes so he/she can focus on them next time.**
