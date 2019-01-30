@@ -55,19 +55,21 @@
         android:id="@+id/btn_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:background="@drawable/btn_long"
         android:text="Progress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="401dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_quizzes" />
 
     <Button
         android:id="@+id/btn_community"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:background="@drawable/btn_long"
         android:text="Community"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="455dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_progress" />
 </android.support.constraint.ConstraintLayout>

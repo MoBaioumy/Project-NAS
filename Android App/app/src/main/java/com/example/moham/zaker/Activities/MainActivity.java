@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // drop the data base and create an empty new one
-        MyDBManager db = MyDBManager.getInstance(getApplicationContext());
-        db.onUpgrade(db.getWritableDatabase(), 1, 1);
+//        MyDBManager db = MyDBManager.getInstance(getApplicationContext());
+//        db.onUpgrade(db.getWritableDatabase(), 1, 1);
     }
 }

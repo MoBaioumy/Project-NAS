@@ -157,7 +157,7 @@ Sick
 
 # Day 17 (27 Jan)
 
-- [ ] Add rotation functionality 
+- [x] Add rotation functionality 
 - [ ] Issue #9 Fix onClick Listeners
 - [ ] Fix Back Navigation for all activities 
 
