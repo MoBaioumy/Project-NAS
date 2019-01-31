@@ -121,47 +121,47 @@ Nothing new. The code from yesterday is still not working properly.
 
 # Day 16 (26 Jan)
 
-      - [x] Code to add words to a quiz
-      - [x] Allow adding a quiz from scratch
-      - [x] Group classes and Activities
-            Organizing code in different packages was done according to [CodePath Guide](https://guides.codepath.com/android/Organizing-your-Source-Files#organize-packages-by-category).
-      - [x] Allow deleting words (only for teacher)
-      - [x] Allow deleting quizzes (only for teacher)
-      - [ ] ~~Publish words to the API~~
-      - [ ] ~~Publish quizzes to the API~~
-      - [ ] ~~Publish results to the API~~
-            I won't create an API like we did in Trivia anymore. All the processing will be done with the local database. For future work, the same will be used only with a Real-time data base like the community function.
-      - [ ] ~~Allow getting definitions from dictionary API~~  
-            This will be put as **extra**
-      - [x] Make nice graphics 
+- [x] Code to add words to a quiz
+- [x] Allow adding a quiz from scratch
+- [x] Group classes and Activities
+Organizing code in different packages was done according to [CodePath Guide](https://guides.codepath.com/android/Organizing-your-Source-Files#organize-packages-by-category).
+- [x] Allow deleting words (only for teacher)
+- [x] Allow deleting quizzes (only for teacher)
+- [ ] ~~Publish words to the API~~
+- [ ] ~~Publish quizzes to the API~~
+- [ ] ~~Publish results to the API~~
+I won't create an API like we did in Trivia anymore. All the processing will be done with the local database. For future work, the same will be used only with a Real-time data base like the community function.
+- [ ] ~~Allow getting definitions from dictionary API~~  
+This will be put as **extra**
+- [x] Make nice graphics 
 
 # Day 17 (27 Jan)
 
-      - [x] Add rotation functionality 
+- [x] Add rotation functionality 
 
-      - [x] Issue #9 Fix onClick Listeners
+- [x] Issue #9 Fix onClick Listeners
 
-            Having inner classes instead on anonymous classes isn't always better [1](http://tseng-blog.nge-web.net/blog/2009/02/14/implementing-listeners-in-your-android-java-application/). That said, most places now have inner classes but not all of them.  
+Having inner classes instead on anonymous classes isn't always better [1](http://tseng-blog.nge-web.net/blog/2009/02/14/implementing-listeners-in-your-android-java-application/). That said, most places now have inner classes but not all of them.  
 
-      - [x] Fix Back Navigation for all activities 
+- [x] Fix Back Navigation for all activities 
 
       ​
 
 # Day 18 (28 Jan)
 
-      - [x] **Test the app on users and gather feedback**
-            Clicking on chat rooms doesn't always works 
-            Within a ChatRoom put its name up top
-            Creating quizzes and adding words isn't completely obvious to non-experienced users
+- [x] **Test the app on users and gather feedback**
+Clicking on chat rooms doesn't always works 
+Within a ChatRoom put its name up top
+Creating quizzes and adding words isn't completely obvious to non-experienced users
 
-      - [x] **Investigate code for any bugs**
+- [x] **Investigate code for any bugs**
             There are still issues with the StudentQuizActivity. Like the number of questions a student gets is hard coded to 6. 
 
             All bugs have been added as issues on GitHub
 
 # Day 19 (29 Jan)
 
-      - [x] Fix the bugs discovered and implement the feedback 
-      - [x] Import graphics created with Photoshop and Adobe XD 
-      - [x] Fix themes, colors and design
+- [x] Fix the bugs discovered and implement the feedback 
+- [x] Import graphics created with Photoshop and Adobe XD 
+- [x] Fix themes, colors and design
 
