@@ -7,7 +7,7 @@ Motivation and background behind this idea can be found [here](https://github.co
 
 
 
-This app is to enable classrooms in developing counties to be more effective by providing a set of powerful tools to help both teachers and students in a very user-friendly app. 
+This app is to enable classrooms in developing counties to be more effective by providing a set of powerful tools to help both teachers and students in a very user-friendly app. [Final demo!](https://youtu.be/Z1IP-ddWI2Q)
 
 ![](https://github.com/artix15/Project-NAS/blob/master/Doc/IntroActivity.png)
 
