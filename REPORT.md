@@ -52,3 +52,37 @@ A UML overview of the important activities is provided below.
 
 
 
+## Main challenges and changes
+
+At the start I create prototype using [Adobe XD](https://www.adobe.com/products/xd/ui-design-kits.html). The first two look like [1](https://www.youtube.com/watch?v=p5YkaQjKWw0&feature=youtu.be), [2](https://www.youtube.com/watch?v=dPi2C28WYpQ&feature=youtu.be&fbclid=IwAR1snFk3T4RJoFFlXDoGs7b4SqR7w5wlb-OdB_xoOOzI8z6aajFOlQEQEVU). After this I decided to change design based on feedback from 6 users which stated that it doesn't suit an educational app but more a vacation app. Additionally, to simplify the **app: only one student and one teacher are created**. This is reasonable since the focus become on the core functionality and allowing more user is easily fixed by creating *Teacher*, or *Student* objects and authentication. 
+
+
+
+For creating graphs, I used both **[MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)** and [GraphView](https://github.com/jjoe64/GraphView) with Student and Teacher progress respectively. After trying out both libraries, the first is a better choice since it has more capabilities, better documentation and is easy to use. 
+
+
+
+Regarding the quizzes, I decided to only create one type: True/False questions for memorizing words. You simply enter words lists and you are tested on it. Since you only store 2 Strings and no Booleans for the right answer, it's simple to start with. Future work could include MCQ and more types. 
+
+
+
+The database to modelled using three tables. Since these tables are connected (via the quiz ID), the previously proposed method didn't work. Additionally, extra functions like quiz start and end date were omitted.
+
+
+
+To allow community functionality (like chatting), the standard API's aren't suitable. I used [Firebase](https://console.firebase.google.com/u/0/), since it has *real-time database* functionality. Regarding sharing quizzes across devices, Firebase is good option to use; however, due to time limitation, it has only been implemented as a local sqlite database.
+
+
+
+Finally, the main idea behind this app is to allow a teacher to digitalize a quiz simply by taking a picture of it. Since most of the functions (image processing, OCR and Natural Language Processing) are out of the scope of this course, three sample quizzes have been hard-coded and used a buttons. 
+
+
+
+
+
+
+
+
+
+ 
+
